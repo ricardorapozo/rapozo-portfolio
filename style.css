@@ -24,36 +24,38 @@ h1{font-size:44px;margin:0}
 h2{font-size:24px;margin:0 0 12px}
 p{line-height:1.65}
 
-/* HERO */
+/* ===== HERO (CIRCULAR) ===== */
 .hero{
-  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 20px 40px;
   border-bottom:1px solid var(--stroke);
   overflow:hidden;
 }
+.hero-img-wrapper{
+  width:clamp(160px, 18vw, 220px);
+  height:clamp(160px, 18vw, 220px);
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid var(--brand);
+  box-shadow:0 0 0 4px rgba(0,0,0,.4), 0 12px 24px rgba(0,0,0,.5);
+  margin-bottom:24px;
+}
 .hero-img{
   width:100%;
-  height:clamp(360px, 40vw, 520px);
+  height:100%;
   object-fit:cover;
   object-position:50% var(--hero-focal-y);
-  filter:saturate(.95) brightness(.88);
-  display:block;
-  transition:object-position .3s ease;
+  filter:saturate(.95) brightness(.9);
+  transition:transform .3s ease;
 }
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    180deg,
-    rgba(0,0,0,.30) 0%,
-    rgba(0,0,0,.55) 60%,
-    rgba(0,0,0,.78) 100%
-  );
-}
-.hero-copy{
-  position:absolute;
-  inset:auto 0 24px 0;
-  text-align:center;
-}
+.hero-img:hover{ transform:scale(1.04); }
+
+/* hero-copy agora é estático (não absoluto) */
+.hero-copy{ position:static; }
 .subtitle{color:var(--muted);margin:6px 0 14px}
 .cta{
   display:flex;
@@ -62,6 +64,7 @@ p{line-height:1.65}
   flex-wrap:wrap;
 }
 
+/* BOTÕES */
 .btn{
   background:var(--brand);
   color:#05221d;
@@ -99,10 +102,6 @@ p{line-height:1.65}
 }
 @media (max-width:640px){
   .grid{grid-template-columns:1fr}
-  .hero-img{
-    height:420px;
-    object-position:50% 22%;
-  }
 }
 
 /* CARDS */
