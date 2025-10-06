@@ -7,7 +7,7 @@
   --stroke:#22232a;
   --shadow:0 10px 30px rgba(0,0,0,.35);
   --radius:18px;
-  --hero-focal-y:50%;
+  --hero-focal-y:25%;
 }
 
 *{box-sizing:border-box}
