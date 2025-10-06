@@ -1,45 +1,132 @@
 :root{
-  --bg:#0b0b0c; --panel:#131316; --text:#e9e9f0; --muted:#a5a5b0;
-  --brand:#00d0b5; --stroke:#22232a; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --bg:#0b0b0c;
+  --panel:#131316;
+  --text:#e9e9f0;
+  --muted:#a5a5b0;
+  --brand:#00d0b5;
+  --stroke:#22232a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
   --radius:18px;
+  --hero-focal-y:28%;
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+}
+
 .container{max-width:1160px;margin:0 auto;padding:28px}
 
 h1{font-size:44px;margin:0}
 h2{font-size:24px;margin:0 0 12px}
 p{line-height:1.65}
 
-.hero{position:relative;border-bottom:1px solid var(--stroke);overflow:hidden}
-.hero-img{
-  width:100%; height:480px; object-fit:cover; object-position:center 25%;
-  filter:saturate(.95) brightness(.85);
-  display:block;
+/* HERO */
+.hero{
+  position:relative;
+  border-bottom:1px solid var(--stroke);
+  overflow:hidden;
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.55) 60%,rgba(0,0,0,.75) 100%);}
-.hero-copy{position:absolute;inset:auto 0 24px 0;text-align:center}
+.hero-img{
+  width:100%;
+  height:clamp(360px, 40vw, 520px);
+  object-fit:cover;
+  object-position:50% var(--hero-focal-y);
+  filter:saturate(.95) brightness(.88);
+  display:block;
+  transition:object-position .3s ease;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.30) 0%,
+    rgba(0,0,0,.55) 60%,
+    rgba(0,0,0,.78) 100%
+  );
+}
+.hero-copy{
+  position:absolute;
+  inset:auto 0 24px 0;
+  text-align:center;
+}
 .subtitle{color:var(--muted);margin:6px 0 14px}
-.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cta{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
 
-.btn{background:var(--brand);color:#05221d;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:800;box-shadow:var(--shadow)}
+.btn{
+  background:var(--brand);
+  color:#05221d;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:var(--shadow);
+}
 .btn:hover{opacity:.92}
-.btn.outline{background:transparent;color:var(--text);border:1px solid var(--stroke)}
+.btn.outline{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--stroke);
+}
 
-.panel{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);padding:22px;margin:22px 0}
+/* PANELS */
+.panel{
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  padding:22px;
+  margin:22px 0;
+}
 .panel p{color:var(--muted);max-width:80ch}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.grid{grid-template-columns:1fr}.hero-img{height:420px}}
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .hero-img{
+    height:420px;
+    object-position:50% 22%;
+  }
+}
 
+/* CARDS */
 .card{
-  background:#0f1013;border:1px solid var(--stroke);border-radius:16px;
-  overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--shadow);
+  background:#0f1013;
+  border:1px solid var(--stroke);
+  border-radius:16px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:var(--shadow);
   transition:transform .2s ease,border-color .2s, box-shadow .2s;
 }
-.card:hover{transform:translateY(-4px);border-color:#2a2b33;box-shadow:0 16px 40px rgba(0,0,0,.45)}
-.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#2a2b33;
+  box-shadow:0 16px 40px rgba(0,0,0,.45);
+}
+.card img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
 .card-info{padding:12px 14px}
 .card-info h3{margin:0 0 6px;font-size:16px}
 .card-info p{margin:0;color:var(--muted);font-size:14px}
