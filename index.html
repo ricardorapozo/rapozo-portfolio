@@ -1,32 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ricardo Rapozo | Portfólio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Diretor Audiovisual, Motion Designer e Storyteller. Portfólio com filmes, motion e projetos autorais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Ricardo Rapozo</h1>
-    <p>Diretor Audiovisual | Motion Designer | Storyteller</p>
+  <header class="hero container">
+    <img class="avatar" src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" />
+    <div class="hero-copy">
+      <h1>Ricardo Rapozo</h1>
+      <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
+      <div class="cta">
+        <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Vimeo</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
+      </div>
+    </div>
   </header>
 
-  <section class="about">
-    <h2>Sobre</h2>
-    <p>Profissional de audiovisual com mais de 20 anos de experiência em direção, edição e pós-produção. Já atuei em projetos corporativos, educacionais e autorais, sempre unindo técnica, narrativa e impacto visual.</p>
-  </section>
+  <main>
+    <section class="container about">
+      <h2>Sobre</h2>
+      <p>Profissional de audiovisual com mais de 20 anos em direção, edição e pós-produção. Atuei em projetos corporativos, educacionais e autorais, unindo técnica, narrativa e impacto visual. Experiência na Luma Films (100+ produções), Tribbo Post (Motion Designer Sênior) e projetos autorais como o canal Dossiê Anônimo.</p>
+    </section>
 
-  <section class="works">
-    <h2>Trabalhos</h2>
-    <ul>
-      <li><a href="https://vimeo.com/rapozo" target="_blank">Meu portfólio no Vimeo</a></li>
-      <li><a href="https://youtube.com/@dossieanonimo" target="_blank">Canal Dossiê Anônimo</a></li>
-    </ul>
-  </section>
+    <section class="container works">
+      <h2>Trabalhos em destaque</h2>
 
-  <footer>
-    <p>© 2025 Ricardo Rapozo — São Paulo, Brasil</p>
+      <div class="grid">
+        <!-- Card com thumbnail do Vimeo (link abre no Vimeo) -->
+        <a class="card" href="https://vimeo.com/1071968192" target="_blank" rel="noopener">
+          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025" loading="lazy">
+          <div class="card-info">
+            <h3>Título do Vídeo</h3>
+            <p>Case / Comercial / Institucional</p>
+          </div>
+        </a>
+
+        <!-- Card com embed responsivo (opcional) -->
+        <div class="card embed">
+          <div class="ratio">
+            <iframe src="https://player.vimeo.com/video/SEU_VIDEO_ID?h=000000&title=0&byline=0&portrait=0"
+              loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="card-info">
+            <h3>Outro Projeto (embed)</h3>
+            <p>Motion / VFX</p>
+          </div>
+        </div>
+
+        <!-- Link para o canal -->
+        <a class="card" href="https://www.youtube.com/@dossieanonimo" target="_blank" rel="noopener">
+          <img src="assets/images/dossie.jpg" alt="Dossiê Anônimo" loading="lazy">
+          <div class="card-info">
+            <h3>Dossiê Anônimo</h3>
+            <p>Pesquisa, roteiro, fotografia e edição</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="more">
+        <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Ver portfólio completo no Vimeo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="y"></span> Ricardo Rapozo — São Paulo, Brasil</small>
   </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
