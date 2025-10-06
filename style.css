@@ -24,39 +24,63 @@ h1{font-size:44px;margin:0}
 h2{font-size:24px;margin:0 0 12px}
 p{line-height:1.65}
 
-/* ===== HERO (CIRCULAR) ===== */
-.hero{
+/* ===== HERO BANNER (capa + avatar circular sobreposto) ===== */
+.hero-banner{
+  position:relative;
+  text-align:center;
+  color:var(--text);
+  border-bottom:1px solid var(--stroke);
+  overflow:hidden;
+}
+
+/* imagem de capa */
+.banner-bg{
+  width:100%;
+  height:clamp(240px, 35vw, 360px);
+  overflow:hidden;
+  position:relative;
+}
+.banner-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 45%;
+  filter:brightness(.65) saturate(.9);
+}
+
+/* conteúdo sobreposto (avatar, título, botões) */
+.hero-content{
+  position:relative;
+  margin-top:-100px;           /* faz o avatar “entrar” sobre o banner */
+  padding:0 20px 40px 20px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  padding:60px 20px 40px;
-  border-bottom:1px solid var(--stroke);
-  overflow:hidden;
 }
+
 .hero-img-wrapper{
-  width:clamp(160px, 18vw, 220px);
-  height:clamp(160px, 18vw, 220px);
+  width:clamp(160px, 18vw, 200px);
+  height:clamp(160px, 18vw, 200px);
   border-radius:50%;
   overflow:hidden;
   border:3px solid var(--brand);
   box-shadow:0 0 0 4px rgba(0,0,0,.4), 0 12px 24px rgba(0,0,0,.5);
-  margin-bottom:24px;
+  background:var(--bg);
 }
+
 .hero-img{
   width:100%;
   height:100%;
   object-fit:cover;
   object-position:50% var(--hero-focal-y);
-  filter:saturate(.95) brightness(.9);
+  filter:saturate(.95) brightness(.95);
   transition:transform .3s ease;
 }
-.hero-img:hover{ transform:scale(1.04); }
+.hero-img:hover{ transform:scale(1.05); }
 
-/* hero-copy agora é estático (não absoluto) */
-.hero-copy{ position:static; }
-.subtitle{color:var(--muted);margin:6px 0 14px}
+.hero-content h1{ margin:16px 0 6px; font-size:42px; }
+.subtitle{ color:var(--muted); margin:0 0 14px; }
 .cta{
   display:flex;
   gap:10px;
