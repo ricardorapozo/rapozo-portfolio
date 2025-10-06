@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ricardo Rapozo | Portfólio</title>
-  <meta name="description" content="Diretor Audiovisual, Motion Designer e Storyteller. Portfólio com filmes, motion e projetos autorais." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero container">
-    <img class="avatar" src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" />
-    <div class="hero-copy">
+  <header class="hero">
+    <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img">
+    <div class="hero-copy container">
       <h1>Ricardo Rapozo</h1>
       <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
-      <div class="cta">
-        <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Vimeo</a>
-        <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank" rel="noopener">LinkedIn</a>
+      <nav class="cta">
+        <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
         <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="container about">
+  <main class="container">
+    <section class="panel">
       <h2>Sobre</h2>
-      <p>Profissional de audiovisual com mais de 20 anos em direção, edição e pós-produção. Atuei em projetos corporativos, educacionais e autorais, unindo técnica, narrativa e impacto visual. Experiência na Luma Films (100+ produções), Tribbo Post (Motion Designer Sênior) e projetos autorais como o canal Dossiê Anônimo.</p>
+      <p>Profissional de audiovisual com 20+ anos em direção, edição e pós. Atuação em campanhas,
+        conteúdo institucional e projetos autorais como o Dossiê Anônimo, unindo técnica, narrativa e IA.</p>
     </section>
 
-    <section class="container works">
+    <section class="panel">
       <h2>Trabalhos em destaque</h2>
 
       <div class="grid">
-        <!-- Card com thumbnail do Vimeo (link abre no Vimeo) -->
+        <!-- THUMB → abre no Vimeo (seguro, sem problema de permissão) -->
         <a class="card" href="https://vimeo.com/1071968192" target="_blank" rel="noopener">
-          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025" loading="lazy">
+          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel">
           <div class="card-info">
-            <h3>Título do Vídeo</h3>
-            <p>Case / Comercial / Institucional</p>
+            <h3>Motion Reel 2025</h3>
+            <p>Seleção de projetos recentes</p>
           </div>
         </a>
 
-        <!-- Card com embed responsivo (opcional) -->
-        <div class="card embed">
-          <div class="ratio">
-            <iframe src="https://player.vimeo.com/video/SEU_VIDEO_ID?h=000000&title=0&byline=0&portrait=0"
-              loading="lazy" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-          </div>
+        <a class="card" href="https://vimeo.com/1071968192" target="_blank" rel="noopener">
+          <img src="assets/images/thumbReel2025.webp" alt="Case 1">
           <div class="card-info">
-            <h3>Outro Projeto (embed)</h3>
-            <p>Motion / VFX</p>
+            <h3>Case Comercial</h3>
+            <p>Direção e pós</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Link para o canal -->
         <a class="card" href="https://www.youtube.com/@dossieanonimo" target="_blank" rel="noopener">
-          <img src="assets/images/dossie.jpg" alt="Dossiê Anônimo" loading="lazy">
+          <img src="assets/thumbs/dossie.jpg" alt="Dossiê Anônimo">
           <div class="card-info">
             <h3>Dossiê Anônimo</h3>
             <p>Pesquisa, roteiro, fotografia e edição</p>
@@ -66,7 +58,7 @@
       </div>
 
       <div class="more">
-        <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Ver portfólio completo no Vimeo</a>
+        <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Ver portfólio completo</a>
       </div>
     </section>
   </main>
@@ -75,8 +67,6 @@
     <small>© <span id="y"></span> Ricardo Rapozo — São Paulo, Brasil</small>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
