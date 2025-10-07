@@ -73,5 +73,14 @@
     <small>© <span id="y"></span> Ricardo Rapozo — São Paulo, Brasil</small>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    
+    <!-- MODAL DO VÍDEO -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-container">
+      <button class="close-btn" onclick="closeVideo()">×</button>
+      <iframe id="vimeoPlayer" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
 </body>
 </html>
