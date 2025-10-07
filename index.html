@@ -84,18 +84,33 @@
   </div>
 
   <script>
+const modal = document.getElementById("videoModal");
+const player = document.getElementById("vimeoPlayer");
+
+// abre o vídeo no modal
 function openVideo(vimeoURL) {
   const videoId = vimeoURL.split("/").pop();
   const embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
-  document.getElementById("vimeoPlayer").src = embedUrl;
-  document.getElementById("videoModal").style.display = "flex";
+  player.src = embedUrl;
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden"; // trava scroll
 }
 
+// fecha o modal (botão ou clique fora)
 function closeVideo() {
-  document.getElementById("videoModal").style.display = "none";
-  document.getElementById("vimeoPlayer").src = "";
+  modal.style.display = "none";
+  player.src = ""; // para o vídeo
+  document.body.style.overflow = ""; // libera scroll
 }
+
+// fecha ao clicar fora do player
+modal.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    closeVideo();
+  }
+});
 </script>
+
 
 </body>
 </html>
