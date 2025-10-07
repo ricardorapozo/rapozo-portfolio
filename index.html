@@ -38,13 +38,14 @@
       <h2>Trabalhos em destaque</h2>
 
       <div class="grid">
-        <a class="card" href="https://vimeo.com/1071968192" target="_blank" rel="noopener">
-          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025" loading="lazy">
+        <a class="card" href="javascript:void(0)" onclick="openVideo('https://vimeo.com/1071968192')">
+          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025">
           <div class="card-info">
             <h3>Motion Reel 2025</h3>
             <p>Seleção dos mais recentes jobs</p>
           </div>
         </a>
+
 
         <a class="card" href="https://vimeo.com/1123799908" target="_blank" rel="noopener">
           <img src="assets/images/thumbTemposModernos.webp" alt="Documentário — Tempos Modernos" loading="lazy">
@@ -81,6 +82,20 @@
       <iframe id="vimeoPlayer" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
   </div>
+
+  <script>
+function openVideo(vimeoURL) {
+  const videoId = vimeoURL.split("/").pop();
+  const embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+  document.getElementById("vimeoPlayer").src = embedUrl;
+  document.getElementById("videoModal").style.display = "flex";
+}
+
+function closeVideo() {
+  document.getElementById("videoModal").style.display = "none";
+  document.getElementById("vimeoPlayer").src = "";
+}
+</script>
 
 </body>
 </html>
