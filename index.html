@@ -38,8 +38,8 @@
       <h2>Trabalhos em destaque</h2>
 
       <div class="grid">
-        <a class="card" href="javascript:void(0)" onclick="openVideo('https://vimeo.com/1071968192')">
-          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025">
+        <a class="card" href="javascript:void(0)" onclick="openVideo('1071968192','Motion Reel 2025')">
+          <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025" loading="lazy">
           <div class="card-info">
             <h3>Motion Reel 2025</h3>
             <p>Seleção dos mais recentes jobs</p>
@@ -89,32 +89,69 @@
 
 
   <script>
-const modal = document.getElementById("videoModal");
-const player = document.getElementById("vimeoPlayer");
+(function () {
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('vimeoPlayer');
+  const closeBtn = document.getElementById('closeBtn');
+  const titleEl = document.getElementById('videoTitle');
 
-// abre o vídeo no modal
-function openVideo(vimeoURL) {
-  const videoId = vimeoURL.split("/").pop();
-  const embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
-  player.src = embedUrl;
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden"; // trava scroll
-}
+  // abre o modal com o ID do Vimeo (padrão: sem autoplay)
+  // use: openVideo('1071968192', 'Motion Reel 2025')
+  window.openVideo = function(vimeoId, title){
+    // garante string limpa
+    const id = String(vimeoId).trim();
+    if(!id) return;
 
-// fecha o modal (botão ou clique fora)
-function closeVideo() {
-  modal.style.display = "none";
-  player.src = ""; // para o vídeo
-  document.body.style.overflow = ""; // libera scroll
-}
+    // seta iframe SEM autoplay
+    const embedUrl = `https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`;
+    player.src = embedUrl;
 
-// fecha ao clicar fora do player
-modal.addEventListener("click", function(event) {
-  if (event.target === modal) {
-    closeVideo();
-  }
-});
+    // seta título
+    titleEl.textContent = title || 'Vídeo';
+
+    // mostra modal
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  // fecha modal e limpa src do iframe (para parar o vídeo)
+  window.closeVideo = function(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    // leve timeout para permitir transição antes de limpar src (evita flash)
+    setTimeout(()=> player.src = '', 200);
+    document.body.style.overflow = '';
+  };
+
+  // clicar no X
+  closeBtn.addEventListener('click', closeVideo);
+
+  // clicar fora do container fecha
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeVideo();
+  });
+
+  // tecla ESC fecha
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('open')) closeVideo();
+  });
+
+  // acessibilidade: foco no close quando abrir (opcional)
+  const observer = new MutationObserver(function(mutations){
+    mutations.forEach(m => {
+      if(m.type === 'attributes' && m.attributeName === 'class'){
+        if(modal.classList.contains('open')) {
+          closeBtn.focus();
+        }
+      }
+    });
+  });
+  observer.observe(modal, { attributes: true });
+
+})();
 </script>
+
 
 
 </body>
