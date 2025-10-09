@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ricardo Rapozo | Portfólio</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-<header class="hero-banner">
-  <div class="banner-bg">
-    <img src="assets/images/banner.jpg" alt="Banner de fundo" loading="eager">
-  </div>
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
 
-  <div class="hero-content">
-    <div class="hero-img-wrapper">
-      <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img" loading="eager">
+  <div class="hero-inner container">
+    <div class="hero-left">
+      <div class="hero-img-wrapper">
+        <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img">
+      </div>
     </div>
-    <h1>Ricardo Rapozo</h1>
-    <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
-    <nav class="cta">
-      <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
-      <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
-      <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
-    </nav>
+
+    <div class="hero-right">
+      <div class="about-box">
+        <h1>Ricardo Rapozo</h1>
+        <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
+        <p class="about-text">
+          Profissional de audiovisual com mais de 20 anos de experiência em direção, edição e pós-produção.
+          Atuei em produtoras, projetos autorais e campanhas para marcas, unindo técnica, narrativa e sensibilidade visual.
+        </p>
+
+        <nav class="cta">
+          <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Vimeo</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -152,6 +153,32 @@
 })();
 </script>
 
+<script>
+(function(){
+  const bg = document.querySelector('.hero-bg');
+  if(!bg) return;
+
+  // reduz movimento se o usuário preferir
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+
+  // multiplica deslocamento para o efeito
+  const intensity = 0.18;
+
+  let lastY = window.scrollY;
+  function onScroll(){
+    const rect = document.querySelector('.hero').getBoundingClientRect();
+    const offset = Math.max(-rect.top, 0); // quanto rolou a página sobre o hero
+    const move = offset * intensity;
+    bg.style.transform = `translate3d(0, ${move}px, 0)`;
+    lastY = window.scrollY;
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  // trigger initial
+  onScroll();
+})();
+</script>
 
 
 </body>
