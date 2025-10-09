@@ -24,69 +24,92 @@ h1{font-size:44px;margin:0}
 h2{font-size:24px;margin:0 0 12px}
 p{line-height:1.65}
 
-/* ===== HERO BANNER (capa + avatar circular sobreposto) ===== */
-.hero-banner{
-  position:relative;
-  text-align:center;
-  color:var(--text);
-  border-bottom:1px solid var(--stroke);
-  overflow:hidden;
+/* ===== HERO: layout lado-a-lado + parallax (corrigido) ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 0 36px;
+  border-bottom: 1px solid var(--stroke);
+  background: transparent;
 }
 
-/* imagem de capa */
-.banner-bg{
-  width:100%;
-  height:clamp(240px, 35vw, 360px);
-  overflow:hidden;
-  position:relative;
-}
-.banner-bg img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 45%;
-  filter:brightness(.65) saturate(.9);
-}
-
-/* conteúdo sobreposto (avatar, título, botões) */
-.hero-content{
-  position:relative;
-  margin-top:-100px;           /* faz o avatar “entrar” sobre o banner */
-  padding:0 20px 40px 20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+/* background layer (parallax) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/hero-background.jpg'); /* opcional */
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(0);
+  will-change: transform;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(.7) blur(.6px);
 }
 
+/* container interno alinhado — limita largura e centraliza */
+.hero-inner {
+  position: relative; /* acima do bg */
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* esquerda: foto */
+.hero-left { display:flex; align-items:center; justify-content:flex-start; }
+
+/* wrapper imagem — controla tamanho e formato */
 .hero-img-wrapper{
-  width:clamp(160px, 18vw, 200px);
-  height:clamp(160px, 18vw, 200px);
-  border-radius:50%;
-  overflow:hidden;
-  border:3px solid var(--brand);
-  box-shadow:0 0 0 4px rgba(0,0,0,.4), 0 12px 24px rgba(0,0,0,.5);
-  background:var(--bg);
+  width: 320px;
+  height: 320px;
+  border-radius: 16px; /* use 50% se quiser círculo */
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,.6);
+  background: #000;
+  flex-shrink: 0;
 }
 
+/* imagem dentro do wrapper — COVER e não estoura */
 .hero-img{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:50% var(--hero-focal-y);
-  filter:saturate(.95) brightness(.95);
-  transition:transform .3s ease;
+  object-position:center;
+  display:block;
+  transform: translateZ(0);
+  transition: transform .45s ease;
 }
-.hero-img:hover{ transform:scale(1.05); }
+.hero-img-wrapper:hover .hero-img{ transform: scale(1.03); }
 
-.hero-content h1{ margin:16px 0 6px; font-size:42px; }
-.subtitle{ color:var(--muted); margin:0 0 14px; }
-.cta{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
+/* direita: box sobre */
+.hero-right { display:flex; align-items:center; }
+.about-box{
+  background: linear-gradient(180deg, rgba(19,19,22,.88), rgba(19,19,22,.96));
+  border: 1px solid var(--stroke);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
+
+/* texto dentro da about-box */
+.about-box h1{ font-size:40px; margin:0 0 6px; }
+.about-box .subtitle{ color:var(--muted); margin-bottom:12px; }
+.about-box .about-text{ color:var(--text); line-height:1.6; margin-bottom:14px; max-width:60ch; }
+
+/* responsivo: empilha em telas pequenas */
+@media (max-width:920px){
+  .hero-inner{ grid-template-columns: 1fr; gap:18px; padding: 0 18px; }
+  .hero-img-wrapper{ width:220px; height:220px; margin:0 auto; border-radius:50%; }
+  .about-box{ text-align:left; }
+}
+
 
 /* BOTÕES */
 .btn{
@@ -249,79 +272,4 @@ p{line-height:1.65}
   .video-title{ font-size:15px; }
 }
 
-/* HERO: layout lado-a-lado + parallax */
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: 48px 0 36px;
-  border-bottom: 1px solid var(--stroke);
-}
-
-/* background layer (parallax) */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('assets/images/hero-background.jpg'); /* sua imagem de banner */
-  background-size: cover;
-  background-position: center;
-  transform: translateZ(0);
-  will-change: transform;
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-  filter: saturate(.7) blur(0.6px);
-}
-
-/* container com conteúdo em duas colunas */
-.hero-inner {
-  position: relative; /* acima do bg */
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 40px;
-  align-items: center;
-  z-index: 2;
-}
-
-/* esquerda: foto circular */
-.hero-left { display:flex; justify-content:flex-start; }
-.hero-img-wrapper{
-  width: 320px;
-  height: 320px;
-  border-radius: 16px; /* se preferir círculo: 50% */
-  overflow: hidden;
-  border: 6px solid #fff;
-  box-shadow: 0 18px 40px rgba(0,0,0,.6);
-  background: #000;
-}
-.hero-img{
-  width:100%; height:100%; object-fit:cover; object-position:center;
-  transition: transform .6s ease;
-}
-.hero-img-wrapper:hover .hero-img{ transform: scale(1.03); }
-
-/* direita: box sobre */
-.hero-right { display:flex; align-items:center; }
-.about-box{
-  background: linear-gradient(180deg, rgba(19,19,22,.85), rgba(19,19,22,.95));
-  border: 1px solid var(--stroke);
-  padding: 28px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-.about-box h1{ font-size:40px; margin:0 0 6px; }
-.about-box .subtitle{ color:var(--muted); margin-bottom:12px; }
-.about-box .about-text{ color:var(--text); line-height:1.6; margin-bottom:14px; max-width:60ch; }
-
-/* small screens: stack vertical */
-@media (max-width:920px){
-  .hero-inner{ grid-template-columns: 1fr; gap:18px; padding: 0 8px; }
-  .hero-img-wrapper{ width:220px; height:220px; margin:0 auto; border-radius:50%; }
-  .about-box{ text-align:left; }
-}
-
-/* reduce motion */
-@media (prefers-reduced-motion: reduce){
-  .hero-bg { transition: none !important; will-change: auto; }
-  .hero-img{ transition: none !important; }
-}
 
