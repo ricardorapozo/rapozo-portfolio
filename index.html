@@ -9,24 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-<header class="hero-banner">
-  <div class="banner-bg">
-    <img src="assets/images/banner.jpg" alt="Banner de fundo" loading="eager">
-  </div>
+</head>
 
-  <div class="hero-content">
-    <div class="hero-img-wrapper">
-      <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img" loading="eager">
+<body>
+  <header class="hero-banner">
+    <div class="banner-bg">
+      <img src="assets/images/banner.jpg" alt="Banner de fundo" loading="eager">
     </div>
-    <h1>Ricardo Rapozo</h1>
-    <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
-    <nav class="cta">
-      <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
-      <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
-      <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
-    </nav>
-  </div>
-</header>
+
+    <div class="hero-content">
+      <div class="hero-img-wrapper">
+        <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img" loading="eager">
+      </div>
+      <h1>Ricardo Rapozo</h1>
+      <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
+      <nav class="cta">
+        <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
+        <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <section class="panel">
@@ -38,6 +41,7 @@
       <h2>Trabalhos em destaque</h2>
 
       <div class="grid">
+        <!-- CARD 1 -->
         <a class="card" href="javascript:void(0)" onclick="openVideo('1071968192','Motion Reel 2025')">
           <img src="assets/images/thumbReel2025.webp" alt="Motion Reel 2025" loading="lazy">
           <div class="card-info">
@@ -46,6 +50,7 @@
           </div>
         </a>
 
+        <!-- CARD 2 -->
         <a class="card" href="https://www.youtube.com/@dossieanonimo" target="_blank" rel="noopener">
           <img src="assets/images/dossie.jpg" alt="Dossiê Anônimo" loading="lazy">
           <div class="card-info">
@@ -53,16 +58,17 @@
             <p>Pesquisa, roteiro, fotografia e edição</p>
           </div>
         </a>
-      </div>
-                
-      <a class="card" href="javascript:void(0)" onclick="openVideo('1123799908','Documentário — Tempos Modernos')">
+
+        <!-- CARD 3 -->
+        <a class="card" href="javascript:void(0)" onclick="openVideo('1123799908','Documentário — Tempos Modernos')">
           <img src="assets/images/thumbTemposModernos.webp" alt="Documentário — Tempos Modernos" loading="lazy">
           <div class="card-info">
             <h3>Documentário</h3>
             <p>Direção e roteiro</p>
           </div>
         </a>
-                   
+
+        <!-- CARD 4 -->
         <a class="card" href="javascript:void(0)" onclick="openVideo('1125939621','B3 - CULTUR4')">
           <img src="assets/images/b3Cultur4.webp" alt="B3 - CULTUR4" loading="lazy">
           <div class="card-info">
@@ -70,15 +76,17 @@
             <p>Direção / Motion Graphics</p>
           </div>
         </a>
-        
+
+        <!-- CARD 5 -->
         <a class="card" href="javascript:void(0)" onclick="openVideo('1125951699','C6 Bank - Conta Global')">
           <img src="assets/images/c6ContaGlobal.webp" alt="C6 Bank - Conta Global" loading="lazy">
           <div class="card-info">
             <h3>C6 Bank - Conta Global</h3>
             <p>Direção / Motion Graphics</p>
           </div>
-        </a>                                   
+        </a>
 
+        <!-- CARD 6 -->
         <a class="card" href="https://youtu.be/dFxg31qX37s?si=ZGScbH2tRgYDOzKa" target="_blank" rel="noopener">
           <img src="assets/images/rappinHoodPonto41.jpg" alt="Rappin Hood - .41" loading="lazy">
           <div class="card-info">
@@ -86,7 +94,7 @@
             <p>Edição / Motion Graphics</p>
           </div>
         </a>
-      </div>
+      </div> <!-- fecha .grid -->
 
       <div class="more">
         <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Ver portfólio completo</a>
@@ -97,87 +105,53 @@
   <footer class="container footer">
     <small>© <span id="y"></span> Ricardo Rapozo — São Paulo, Brasil</small>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-    
-    <!-- MODAL DO VÍDEO -->
-<div id="videoModal" class="video-modal" aria-hidden="true">
-  <div class="video-container" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
-    <button class="close-btn" id="closeBtn" aria-label="Fechar">×</button>
-
-    <div class="video-header">
-      <h3 id="videoTitle" class="video-title">Título do vídeo</h3>
-    </div>
-
-    <iframe id="vimeoPlayer" src="" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Player Vimeo"></iframe>
-  </div>
-</div>
-
 
   <script>
-(function () {
-  const modal = document.getElementById('videoModal');
-  const player = document.getElementById('vimeoPlayer');
-  const closeBtn = document.getElementById('closeBtn');
-  const titleEl = document.getElementById('videoTitle');
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 
-  // abre o modal com o ID do Vimeo (padrão: sem autoplay)
-  // use: openVideo('1071968192', 'Motion Reel 2025')
-  window.openVideo = function(vimeoId, title){
-    // garante string limpa
-    const id = String(vimeoId).trim();
-    if(!id) return;
+  <!-- MODAL DE VÍDEO -->
+  <div id="videoModal" class="video-modal" aria-hidden="true">
+    <div class="video-container" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+      <button class="close-btn" id="closeBtn" aria-label="Fechar">×</button>
 
-    // seta iframe SEM autoplay
-    const embedUrl = `https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`;
-    player.src = embedUrl;
+      <div class="video-header">
+        <h3 id="videoTitle" class="video-title">Título do vídeo</h3>
+      </div>
 
-    // seta título
-    titleEl.textContent = title || 'Vídeo';
+      <iframe id="vimeoPlayer" src="" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Player Vimeo"></iframe>
+    </div>
+  </div>
 
-    // mostra modal
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
+  <script>
+  (function () {
+    const modal = document.getElementById('videoModal');
+    const player = document.getElementById('vimeoPlayer');
+    const closeBtn = document.getElementById('closeBtn');
+    const titleEl = document.getElementById('videoTitle');
 
-  // fecha modal e limpa src do iframe (para parar o vídeo)
-  window.closeVideo = function(){
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    // leve timeout para permitir transição antes de limpar src (evita flash)
-    setTimeout(()=> player.src = '', 200);
-    document.body.style.overflow = '';
-  };
+    window.openVideo = function(vimeoId, title){
+      const id = String(vimeoId).trim();
+      if(!id) return;
+      const embedUrl = `https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0`;
+      player.src = embedUrl;
+      titleEl.textContent = title || 'Vídeo';
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
 
-  // clicar no X
-  closeBtn.addEventListener('click', closeVideo);
+    window.closeVideo = function(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      setTimeout(()=> player.src = '', 200);
+      document.body.style.overflow = '';
+    };
 
-  // clicar fora do container fecha
-  modal.addEventListener('click', function(e){
-    if(e.target === modal) closeVideo();
-  });
-
-  // tecla ESC fecha
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && modal.classList.contains('open')) closeVideo();
-  });
-
-  // acessibilidade: foco no close quando abrir (opcional)
-  const observer = new MutationObserver(function(mutations){
-    mutations.forEach(m => {
-      if(m.type === 'attributes' && m.attributeName === 'class'){
-        if(modal.classList.contains('open')) {
-          closeBtn.focus();
-        }
-      }
-    });
-  });
-  observer.observe(modal, { attributes: true });
-
-})();
-</script>
-
-
-
+    closeBtn.addEventListener('click', closeVideo);
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeVideo(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeVideo(); });
+  })();
+  </script>
 </body>
 </html>
