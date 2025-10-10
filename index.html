@@ -12,31 +12,40 @@
 </head>
 
 <body>
-  <header class="hero-banner">
-    <div class="banner-bg">
+  <header class="hero">
+    <div class="hero-bg">
       <img src="assets/images/banner.jpg" alt="Banner de fundo" loading="eager">
     </div>
 
-    <div class="hero-content">
-      <div class="hero-img-wrapper">
-        <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img" loading="eager">
+    <div class="container hero-inner">
+      <!-- LADO ESQUERDO: FOTO -->
+      <div class="hero-left">
+        <div class="hero-img-wrapper">
+          <img src="assets/images/rapozoPerfil.webp" alt="Ricardo Rapozo" class="hero-img" loading="eager">
+        </div>
       </div>
-      <h1>Ricardo Rapozo</h1>
-      <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
-      <nav class="cta">
-        <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
-        <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
-        <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
-      </nav>
+
+      <!-- LADO DIREITO: TEXTO + SOBRE -->
+      <div class="hero-right">
+        <div class="about-box">
+          <h1>Ricardo Rapozo</h1>
+          <p class="subtitle">Diretor Audiovisual · Motion Designer · Storyteller</p>
+
+          <p class="about-text">
+            Diretor e coordenador de pós-produção com mais de 20 anos de experiência no mercado nacional e internacional. Especialista em storytelling visual, VFX e supervisão criativa, liderando equipes e gerindo fluxos para garantir entregas de alto padrão técnico e narrativo a marcas líderes no Brasil.
+          </p>
+
+          <nav class="cta">
+            <a class="btn" href="https://vimeo.com/rapozo" target="_blank">Vimeo</a>
+            <a class="btn outline" href="https://www.linkedin.com/in/ricardo-rapozo-588995111" target="_blank">LinkedIn</a>
+            <a class="btn outline" href="mailto:ricardorapozo@gmail.com">Contato</a>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="panel">
-      <h2>Sobre</h2>
-      <p>Diretor e coordenador de pós-produção com mais de 20 anos de experiência no mercado nacional e internacional. Especialista em storytelling visual, VFX e supervisão criativa, liderando equipes e gerindo fluxos para garantir entregas de alto padrão técnico e narrativo a marcas líderes no Brasil.</p>
-    </section>
-
     <section class="panel">
       <h2>Trabalhos em destaque</h2>
 
@@ -94,8 +103,7 @@
             <p>Direção e roteiro</p>
           </div>
         </a>
-      
-      </div> <!-- fecha .grid -->
+      </div>
 
       <div class="more">
         <a class="btn" href="https://vimeo.com/rapozo" target="_blank" rel="noopener">Ver portfólio completo</a>
