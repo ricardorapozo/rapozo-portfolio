@@ -1553,6 +1553,9 @@ color: #fff;
 margin: 53px 0 0 0;
 padding: 0;
 color: #fff;
+line-height: 1.7;
+font-weight: 300;
+letter-spacing: 0.2px;
 }
 
 @media all and (min-width: 1920px) {
@@ -4599,4 +4602,66 @@ letter-spacing: 0.05em;
 
 .skillbar-bar {
 height: 1px;
+}
+
+/* fundo esquerdo contato */
+.contact-container {
+    background: #0a0a0a !important;
+}
+
+/* texto geral */
+.contact-container,
+.contact-container p,
+.contact-container span {
+    color: #fff !important;
+}
+
+/* email */
+.contact-info-mail a {
+    color: #fff !important;
+}
+
+/* linha underline do link */
+.link-underline-dark::after {
+    background-color: #fff !important;
+}
+
+/* botão texto */
+.button-link {
+    color: #fff !important;
+}
+
+/* ícones sociais */
+.social-icons-contact a {
+    color: #fff !important;
+}
+
+/* hover ícones */
+.social-icons-contact a:hover {
+    opacity: 0.7;
+}
+
+.contact-info-mail a {
+    letter-spacing: 1px;
+}
+
+.portfolio-item::before{
+background: rgba(0,0,0,0.35);
+}
+
+.portfolio-item h3{
+font-size: clamp(60px, 2vw, 40px);
+}
+
+.portfolio-item span{
+opacity:.7;
+letter-spacing:.08em;
+}
+
+.portfolio-item img{
+transition: transform .8s ease;
+}
+
+.portfolio-item:hover img{
+transform: scale(1.04);
 }
