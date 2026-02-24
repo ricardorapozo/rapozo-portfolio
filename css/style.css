@@ -152,15 +152,19 @@ font-size:inherit;
 background-image: url(../img/background/home-bg.jpg);
 }
 
-.section-bg-home.section-bg-home-light {
-background-image: url(../img/background/home-light-bg.jpg);
+.webp .section-bg-home {
+background-image: url(../img/background/home-bg.webp);
 }
-
 
 /* 1.2. about IMG BACKGROUND */
 .about-bg {
 background-image: url(../img/about/about-bg.jpg);
 }
+
+.webp .about-bg {
+background-image: url(../img/about/about-bg.webp);
+}
+
 .about-bg {
   transition: filter .5s ease;
 }
@@ -174,133 +178,194 @@ background-image: url(../img/about/about-bg.jpg);
 background-image: url(../img/services/services-bg-1.jpg);
 }
 
+.webp .services-bg-1 {
+background-image: url(../img/services/services-bg-1.webp);
+}
+
 .services-bg-2 {
 background-image: url(../img/services/services-bg-2.jpg);
+}
+
+.webp .services-bg-2 {
+background-image: url(../img/services/services-bg-2.webp);
 }
 
 .services-bg-3 {
 background-image: url(../img/services/services-bg-3.jpg);
 }
 
+.webp .services-bg-3 {
+background-image: url(../img/services/services-bg-3.webp);
+}
+
 .services-bg-4 {
 background-image: url(../img/services/services-bg-4.jpg);
+}
+
+.webp .services-bg-4 {
+background-image: url(../img/services/services-bg-4.webp);
 }
 
 .services-bg-5 {
 background-image: url(../img/services/services-bg-5.jpg);
 }
 
+.webp .services-bg-5 {
+background-image: url(../img/services/services-bg-5.webp);
+}
+
 .services-bg-6 {
 background-image: url(../img/services/services-bg-6.jpg);
+}
+
+.webp .services-bg-6 {
+background-image: url(../img/services/services-bg-6.webp);
 }
 
 .services-bg-7 {
 background-image: url(../img/services/services-bg-7.jpg);
 }
 
+.webp .services-bg-7 {
+background-image: url(../img/services/services-bg-7.webp);
+}
+
 .services-bg-8 {
 background-image: url(../img/services/services-bg-8.jpg);
+}
+
+.webp .services-bg-8 {
+background-image: url(../img/services/services-bg-8.webp);
 }
 
 .services-bg-9 {
 background-image: url(../img/services/services-bg-9.jpg);
 }
 
+.webp .services-bg-9 {
+background-image: url(../img/services/services-bg-9.webp);
+}
+
 .services-bg-10 {
 background-image: url(../img/services/services-bg-10.jpg);
+}
+
+.webp .services-bg-10 {
+background-image: url(../img/services/services-bg-10.webp);
 }
 
 .services-bg-11 {
 background-image: url(../img/services/services-bg-11.jpg);
 }
 
+.webp .services-bg-11 {
+background-image: url(../img/services/services-bg-11.webp;
+}
+
 .services-bg-12 {
 background-image: url(../img/services/services-bg-12.jpg);
 }
+
+.webp .services-bg-12 {
+background-image: url(../img/services/services-bg-12.webp);
+}
+
 
 /* 1.4. works IMG carousel IMG BACKGROUND */
 .works-page-img-carousel-item-1 {		
 background-image: url(../img/works/works-page-img-carousel-item-1.jpg);
 }
 
+.webp .works-page-img-carousel-item-1 {       
+background-image: url(../img/works/works-page-img-carousel-item-1.webp);
+}
+
 .works-page-img-carousel-item-2 {		
 background-image: url(../img/works/works-page-img-carousel-item-2.jpg);
+}
+
+.webp .works-page-img-carousel-item-2 {       
+background-image: url(../img/works/works-page-img-carousel-item-2.webp);
 }
 
 .works-page-img-carousel-item-3 {	
 background-image: url(../img/works/works-page-img-carousel-item-3.jpg);
 }
 
+.webp .works-page-img-carousel-item-3 {       
+background-image: url(../img/works/works-page-img-carousel-item-3.webp);
+}
+
 .works-page-img-carousel-item-4 {		
 background-image: url(../img/works/works-page-img-carousel-item-4.jpg);
+}
+
+.webp .works-page-img-carousel-item-4 {       
+background-image: url(../img/works/works-page-img-carousel-item-4.webp);
 }
 
 .works-page-img-carousel-item-5 {		
 background-image: url(../img/works/works-page-img-carousel-item-5.jpg);
 }
 
+.webp .works-page-img-carousel-item-5 {       
+background-image: url(../img/works/works-page-img-carousel-item-5.webp);
+}
+
 .works-page-img-carousel-item-6 {		
 background-image: url(../img/works/works-page-img-carousel-item-6.jpg);
+}
+
+.webp .works-page-img-carousel-item-6 {       
+background-image: url(../img/works/works-page-img-carousel-item-6.webp);
 }
 
 .works-page-img-carousel-item-7 {	
 background-image: url(../img/works/works-page-img-carousel-item-7.jpg);
 }
 
+.webp .works-page-img-carousel-item-7 {       
+background-image: url(../img/works/works-page-img-carousel-item-7.webp);
+}
+
 .works-page-img-carousel-item-8 {		
 background-image: url(../img/works/works-page-img-carousel-item-8.jpg);
+}
+
+.webp .works-page-img-carousel-item-8 {       
+background-image: url(../img/works/works-page-img-carousel-item-8.webp);
 }
 
 .works-page-img-carousel-item-9 {		
 background-image: url(../img/works/works-page-img-carousel-item-9.jpg);
 }
 
+.webp .works-page-img-carousel-item-9 {       
+background-image: url(../img/works/works-page-img-carousel-item-9.webp);
+}
+
 .works-page-img-carousel-item-10 {		
 background-image: url(../img/works/works-page-img-carousel-item-10.jpg);
+}
+
+.webp .works-page-img-carousel-item-10 {       
+background-image: url(../img/works/works-page-img-carousel-item-10.webp);
 }
 
 .works-page-img-carousel-item-11 {		
 background-image: url(../img/works/works-page-img-carousel-item-11.jpg);
 }
 
+.webp .works-page-img-carousel-item-11 {       
+background-image: url(../img/works/works-page-img-carousel-item-11.webp);
+}
+
 .works-page-img-carousel-item-12 {		
 background-image: url(../img/works/works-page-img-carousel-item-12.jpg);
 }
 
-
-/* 1.5. news IMG carousel IMG BACKGROUND */
-.news-page-img-carousel-item-1 {		
-background-image: url(../img/news/news-page-img-carousel-item-1.jpg);
-}
-
-.news-page-img-carousel-item-2 {		
-background-image: url(../img/news/news-page-img-carousel-item-2.jpg);
-}
-
-.news-page-img-carousel-item-3 {	
-background-image: url(../img/news/news-page-img-carousel-item-3.jpg);
-}
-
-.news-page-img-carousel-item-4 {		
-background-image: url(../img/news/news-page-img-carousel-item-4.jpg);
-}
-
-
-/* 1.5.1. news panel left bg IMG BACKGROUND */
-.panel-left.panel-left-bg-1 {
-background-image: url(../img/news/news-page-img-carousel-item-1.jpg);
-}
-
-.panel-left.panel-left-bg-2 {
-background-image: url(../img/news/news-page-img-carousel-item-2.jpg);
-}
-
-.panel-left.panel-left-bg-3 {
-background-image: url(../img/news/news-page-img-carousel-item-3.jpg);
-}
-
-.panel-left.panel-left-bg-4 {
-background-image: url(../img/news/news-page-img-carousel-item-4.jpg);
+.webp .works-page-img-carousel-item-12 {       
+background-image: url(../img/works/works-page-img-carousel-item-12.webp);
 }
 
 
@@ -309,97 +374,45 @@ background-image: url(../img/news/news-page-img-carousel-item-4.jpg);
 background-image: url(../img/contact/contact-bg.jpg);
 }
 
+.webp .contact-bg {
+background-image: url(../img/contact/contact-bg.webp);
+}
+
 
 /* 1.7. slick fullscreen slideshow IMG BACKGROUND */
 .bg-img-1 {
 background-image: url(../img/background/hero-bg-1.jpg);
 }
 
+.webp .bg-img-1 {
+background-image: url(../img/background/hero-bg-1.webp);
+}
+
 .bg-img-2 {
 background-image: url(../img/background/hero-bg-2.jpg);
+}
+
+.webp .bg-img-2 {
+background-image: url(../img/background/hero-bg-2.webp);
 }
 
 .bg-img-3 {
 background-image: url(../img/background/hero-bg-3.jpg);
 }
 
+.webp .bg-img-3 {
+background-image: url(../img/background/hero-bg-3.webp);
+}
+
 .bg-img-4 {
 background-image: url(../img/background/hero-bg-4.jpg);
 }
 
-
-/* 1.8. slick fullscreen slideshow light IMG BACKGROUND */
-.bg-img-1-2 {
-background-image: url(../img/background/hero-bg-1-2.jpg);
-}
-
-.bg-img-2-2 {
-background-image: url(../img/background/hero-bg-2-2.jpg);
-}
-
-.bg-img-3-2 {
-background-image: url(../img/background/hero-bg-3-2.jpg);
-}
-
-.bg-img-4-2 {
-background-image: url(../img/background/hero-bg-4-2.jpg);
+.webp .bg-img-4 {
+background-image: url(../img/background/hero-bg-4.webp);
 }
 
 
-/* 1.9. swiper thumbnail IMG BACKGROUND */
-.thumbnail-slider-bg-1 {
-background-image: url(../img/background/thumbnail-slider-bg-1.jpg);
-}
-
-.thumbnail-slider-bg-2 {
-background-image: url(../img/background/thumbnail-slider-bg-2.jpg);
-}
-
-.thumbnail-slider-bg-3 {
-background-image: url(../img/background/thumbnail-slider-bg-3.jpg);
-}
-
-.thumbnail-slider-bg-4 {
-background-image: url(../img/background/thumbnail-slider-bg-4.jpg);
-}
-
-.thumbnail-slider-bg-5 {
-background-image: url(../img/background/thumbnail-slider-bg-5.jpg);
-}
-
-.thumbnail-slider-bg-6 {
-background-image: url(../img/background/thumbnail-slider-bg-6.jpg);
-}
-
-.thumbnail-slider-bg-7 {
-background-image: url(../img/background/thumbnail-slider-bg-7.jpg);
-}
-
-
-/* 1.10. home IMG carousel slider IMG BACKGROUND */
-.home-page-img-item-1 {		
-background-image: url(../img/background/home-page-img-item-1.jpg);
-}
-
-.home-page-img-item-2 {		
-background-image: url(../img/background/home-page-img-item-2.jpg);
-}
-
-.home-page-img-item-3 {	
-background-image: url(../img/background/home-page-img-item-3.jpg);
-}
-
-.home-page-img-item-4 {		
-background-image: url(../img/background/home-page-img-item-4.jpg);
-}
-
-.home-page-img-item-5 {		
-background-image: url(../img/background/home-page-img-item-5.jpg);
-}
-
-.home-page-img-item-6 {		
-background-image: url(../img/background/home-page-img-item-6.jpg);
-}
 
 
 /* 2. reset */
