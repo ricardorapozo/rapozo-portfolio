@@ -78,20 +78,24 @@ $(function() {
         speed: 500
     });
     // 3.2. slick services slider
-    $(".slick-services").slick({
-        arrows: true,
-        initialSlide: 0,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: "<i class='slick-prev icon ion-chevron-left'></i>",
-        nextArrow: "<i class='slick-next icon ion-chevron-right'></i>",
-        fade: false,
-        autoplay: false,
-        autoplaySpeed: 4000,
-        cssEase: "ease",
-        speed: 500
-    });
+$(".slick-services").each(function(i){
+    let el = $(this);
+
+    setTimeout(function(){
+        el.slick({
+            prevArrow: "<i class='slick-prev icon ion-chevron-left'></i>",
+            nextArrow: "<i class='slick-next icon ion-chevron-right'></i>",
+            arrows:true,
+            infinite:true,
+            slidesToShow:1,
+            slidesToScroll:1,
+            fade:false,
+            autoplay:true,
+            autoplaySpeed:4500,
+            speed:1400
+        });
+    }, i * 2200);
+});
     // 3.3. slick fullscreen slideshow
     $(".slick-fullscreen-slideshow").slick({
         arrows: false,
