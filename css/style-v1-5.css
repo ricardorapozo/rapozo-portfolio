@@ -4604,47 +4604,6 @@ letter-spacing: 0.05em;
 height: 1px;
 }
 
-/* fundo esquerdo contato */
-.contact-container {
-    background: #0a0a0a !important;
-}
-
-/* texto geral */
-.contact-container,
-.contact-container p,
-.contact-container span {
-    color: #fff !important;
-}
-
-/* email */
-.contact-info-mail a {
-    color: #fff !important;
-}
-
-/* linha underline do link */
-.link-underline-dark::after {
-    background-color: #fff !important;
-}
-
-/* botão texto */
-.button-link {
-    color: #fff !important;
-}
-
-/* ícones sociais */
-.social-icons-contact a {
-    color: #fff !important;
-}
-
-/* hover ícones */
-.social-icons-contact a:hover {
-    opacity: 0.7;
-}
-
-.contact-info-mail a {
-    letter-spacing: 1px;
-}
-
 .portfolio-item::before{
 background: rgba(0,0,0,0.35);
 }
