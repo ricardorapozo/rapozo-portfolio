@@ -4305,3 +4305,13 @@ body.fp-viewing-works .overlay{
 opacity:.85;
 }
 
+@media (max-width:768px){
+
+  .about-content{
+    position: relative;
+    height: auto;
+    padding: 120px 0;
+  }
+
+}
+
