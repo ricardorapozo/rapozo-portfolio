@@ -4285,15 +4285,60 @@ width:48px;
 }
 
 .contact-logo{
-animation:fadeUp 1s ease forwards;
 opacity:0;
+filter:blur(6px);
+animation:fadeUp 1s cubic-bezier(.19,1,.22,1) forwards;
 }
 
 @keyframes fadeUp{
-from{transform:translateY(20px);opacity:0;}
-to{transform:translateY(0);opacity:1;}
+from{
+transform:translateY(30px);
+opacity:0;
+filter:blur(6px);
+}
+to{
+transform:translateY(0);
+opacity:1;
+filter:blur(0);
 }
 
+.contact-animate{
+opacity:0;
+transform:translateY(40px);
+transition:all 1.2s cubic-bezier(.19,1,.22,1);
+}
+
+.contact-animate.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FIX tablet landscape */
+@media (min-width:768px) and (max-width:1180px) and (orientation:landscape){
+
+.about-content{
+padding-top:10vh;
+align-items:center!important;
+}
+
+.about-content-inner{
+max-width:600px;
+margin:auto;
+}
+
+.about-txt{
+font-size:1.05rem;
+line-height:1.6;
+padding:0 40px;
+}
+
+h2{
+font-size:2.4rem;
+}
+
+h3{
+font-size:1.2rem;
+letter-spacing:.06em;
 }
 
 }
