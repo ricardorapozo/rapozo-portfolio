@@ -3,9 +3,9 @@
   
   ---
   
-  Template Name: Fox - Fotografia e Motion Design
-  Author:  RPZ
-  Version: 1.0
+  Template Name: Wox - Photography Portfolio Template
+  Author:  ex-nihilo
+  Version: 1.5
 */
 
 
@@ -37,7 +37,7 @@
   13. contact modal
     13.1. contact modal additional CLOSER
   14. swiper slider
-    14.1. swiper parallax slider
+    14.1. swiper thumbnail slider horizontal thumbs
   15. section position reset
     15.1. news position reset
 	15.2. contact position reset
@@ -78,24 +78,20 @@ $(function() {
         speed: 500
     });
     // 3.2. slick services slider
-$(".slick-services").each(function(i){
-    let el = $(this);
-
-    setTimeout(function(){
-        el.slick({
-            prevArrow: "<i class='slick-prev icon ion-chevron-left'></i>",
-            nextArrow: "<i class='slick-next icon ion-chevron-right'></i>",
-            arrows:true,
-            infinite:true,
-            slidesToShow:1,
-            slidesToScroll:1,
-            fade:false,
-            autoplay:true,
-            autoplaySpeed:4500,
-            speed:1400
-        });
-    }, i * 2200);
-});
+    $(".slick-services").slick({
+        arrows: true,
+        initialSlide: 0,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: "<i class='slick-prev icon ion-chevron-left'></i>",
+        nextArrow: "<i class='slick-next icon ion-chevron-right'></i>",
+        fade: false,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        cssEase: "ease",
+        speed: 500
+    });
     // 3.3. slick fullscreen slideshow
     $(".slick-fullscreen-slideshow").slick({
         arrows: false,
@@ -285,10 +281,10 @@ $(".slick-services").each(function(i){
 	
     // 9. fullPage
     $("#fullpage").fullpage({
-        anchors: ["home", "sobre", "servicos", "portfolio", "contato"],
+        anchors: ["home", "sobre", "atuacao", "portfolio", "contato"],
         navigation: true,
         navigationPosition: "right",
-        navigationTooltips: ["Home", "Sobre", "Servicos", "Portfolio", "Contato"],
+        navigationTooltips: ["Home", "Sobre", "Serviços", "Portólio", "Contato"],
         responsiveWidth: 900,
         autoScrolling: true,
         scrollBar: false,
@@ -359,63 +355,35 @@ $(".slick-services").each(function(i){
     });
 	
     // 14. swiper slider
-    // 14.1. swiper parallax slider
-    var swiper = new Swiper(".swiper-container-wrapper .swiper-container", {
-        preloadImages: false,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false
-        },
-        init: true,
-        loop: false,
-        speed: 1200,
-        grabCursor: true,
-        mousewheel: false,
-        keyboard: true,
-        simulateTouch: true,
-        parallax: true,
-        effect: "slide",
-        pagination: {
-            el: ".swiper-slide-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".slide-next",
-            prevEl: ".slide-prev"
-        }
+    // 14.1. swiper thumbnail slider horizontal thumbs
+    var swipersliderTop = new Swiper(".swiper-slider-top", {
+        direction: "vertical",
+        nextButton: ".swiper-button-next",
+        prevButton: ".swiper-button-prev",
+        autoplay: 4000,
+        speed: 1600,
+        spaceBetween: 0,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        touchRatio: 1,
+        loop: true,
+        slideToClickedSlide: true,
+        mousewheelControl: false,
+        keyboardControl: false
     });
-    swiper.on("slideChangeTransitionStart", function() {
-        $(".slider-progress-bar").removeClass("slider-active");
-        $(".hero-bg").find("video").each(function() {
-            this.pause();
-        });
+    var swipersliderBottom = new Swiper(".swiper-slider-bottom", {
+        direction: "horizontal",
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        touchRatio: 1,
+        loop: true,
+        slideToClickedSlide: true,
+        mousewheelControl: false,
+        keyboardControl: false
     });
-    swiper.on("slideChangeTransitionEnd", function() {
-        $(".slider-progress-bar").addClass("slider-active");
-        $(".hero-bg").find("video").each(function() {
-            this.play();
-        });
-    });
-    swiper.on("slideChangeTransitionStart", function() {
-        $(".slider-progress-bar").removeClass("slider-active");
-    });
-    swiper.on("slideChangeTransitionEnd", function() {
-        $(".slider-progress-bar").addClass("slider-active");
-    });
-    var playButton = $(".swiper-slide-controls-play-pause-wrapper");
-    function autoEnd() {
-        playButton.removeClass("slider-on-off");
-        swiper.autoplay.stop();
-    }
-    function autoStart() {
-        playButton.addClass("slider-on-off");
-        swiper.autoplay.start();
-    }
-    playButton.on("click", function() {
-        if (playButton.hasClass("slider-on-off")) autoEnd();
-        else autoStart();
-        return false;
-    });
+    swipersliderTop.params.control = swipersliderBottom;
+    swipersliderBottom.params.control = swipersliderTop;
 	
     // 15. section position reset
     // 15.1. news position reset
