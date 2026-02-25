@@ -285,10 +285,10 @@ $(".slick-services").each(function(i){
 	
     // 9. fullPage
     $("#fullpage").fullpage({
-        anchors: ["home", "about", "services", "works", "news", "contact"],
+        anchors: ["home", "about", "services", "works", "contact"],
         navigation: true,
         navigationPosition: "right",
-        navigationTooltips: ["Home", "About", "Services", "Works", "News", "Contact"],
+        navigationTooltips: ["Home", "About", "Services", "Works", "Contact"],
         responsiveWidth: 900,
         autoScrolling: true,
         scrollBar: false,
