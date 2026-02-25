@@ -323,29 +323,24 @@ $(".slick-services").each(function(i){
 	
     // 12. forms
     // 12.1. contact form
-    $("form#form").on("submit", function() {
-        $("form#form .error").remove();
-        var s = !1;
-        if ($(".requiredField").each(function() {
-                if ("" === jQuery.trim($(this).val())) $(this).prev("label").text(), $(this).parent().append('<span class="error">Campo necessário</span>'), $(this).addClass(
-                    "inputError"), s = !0;
-                else if ($(this).hasClass("email")) {
-                    var r = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-                    r.test(jQuery.trim($(this).val())) || ($(this).prev("label").text(), $(this).parent().append('<span class="error">Endereço de e-mail inválido</span>'), $(this).addClass(
-                        "inputError"), s = !0);
-                }
-            }), !s) {
-            $("form#form input.submit").fadeOut("normal", function() {
-                $(this).parent().append("");
-            });
-            var r = $(this).serialize();
-            $.post($(this).attr("action"), r, function() {
-                $("form#form").slideUp("fast", function() {
-                    $(this).before('<div class="success">Sua mensagem foi enviada!</div>');
+    $("form#form").on("submit", function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+        var data = form.serialize();
+
+        $.post(form.attr("action"), data, function(response) {
+
+            if(response.includes("sucesso")) {
+                form.slideUp("fast", function() {
+                    form.before('<div class="success">Sua mensagem foi enviada!</div>');
                 });
-            });
-        }
-        return !1;
+            } else {
+                alert(response);
+            }
+
+        });
+
     });
 	
     // 13. contact modal
