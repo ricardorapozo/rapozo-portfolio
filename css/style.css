@@ -131,6 +131,7 @@ small{
 font-size:var(--fs-sm);
 }
 
+/*
 .services-section .about-txt{
 font-size:1.2rem;
 line-height:1.9;
@@ -4272,6 +4273,7 @@ height: 1px;
     letter-spacing: 1px;
 }
 
+/*
 .services-txt,
 .services-txt-dark{
     font-size:clamp(1.05rem,1.2vw,1.2rem);
@@ -4313,6 +4315,7 @@ opacity:.92;
 .services-section .link-underline-dark:hover::after{
     width:100%;
 }
+*/
 
 body.fp-viewing-works .overlay{
 opacity:.85;
