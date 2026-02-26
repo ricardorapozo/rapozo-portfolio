@@ -2928,6 +2928,32 @@ textarea:focus::-webkit-input-placeholder { color: transparent; }
          textarea:focus::-moz-placeholder { color: transparent; }
           textarea:focus:-moz-placeholder { color: transparent; }
 
+/* --- FIX FORM COLOR FOR WHITE MODAL --- */
+
+#contact-form input,
+#contact-form textarea {
+    color: #111; /* texto escuro */
+    border-bottom: 1px solid #111;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #777;
+}
+
+#contact-form h2.section-heading {
+    color: #111;
+}
+
+#contact-form p {
+    color: #555;
+}
+
+.success {
+    color: #111;
+}
+
+
 /*
 .contact-logo{
 text-align:center;
