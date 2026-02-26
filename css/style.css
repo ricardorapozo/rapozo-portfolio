@@ -2953,6 +2953,12 @@ textarea:focus::-webkit-input-placeholder { color: transparent; }
     color: #111;
 }
 
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
 
 /*
 .contact-logo{
