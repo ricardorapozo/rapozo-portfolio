@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Página não encontrada | Rapozo</title>
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página não encontrada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<link rel="stylesheet" href="/css/style.css">
+        body, html {
+            height: 100%;
+            overflow: hidden; /* Evita scroll desnecessário */
+        }
 
-<style>
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
 
-body{
-margin:0;
-font-family:sans-serif;
-}
+        /* Lado Esquerdo: Imagem */
+        .lado-esquerdo {
+            flex: 1;
+            background-image: url('/img/404.jpg'); /* Substitua aqui */
+            background-size: cover;
+            background-position: center;
+        }
 
-.wrapper{
-display:flex;
-height:100vh;
-}
+        /* Lado Direito: Bloco Preto */
+        .lado-direito {
+            flex: 1;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
 
-.left{
-flex:1;
-background:url("/img/404.jpg") center/cover no-repeat;
-}
+        .logo {
+            max-width: 150px;
+            margin-bottom: 30px;
+        }
 
-.right{
-flex:1;
-background:#000;
-color:#fff;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:60px;
-}
+        h1 {
+            font-size: 8rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
 
-.right h1{
-font-size:3rem;
-margin-bottom:20px;
-}
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
 
-.right p{
-opacity:.7;
-margin-bottom:30px;
-max-width:400px;
-}
+        .btn-voltar {
+            padding: 15px 40px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
-.right a{
-color:#fff;
-text-decoration:none;
-border-bottom:1px solid #fff;
-width:fit-content;
-}
+        .btn-voltar:hover {
+            background-color: #ccc;
+        }
 
-.right a:hover{
-opacity:.6;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-.wrapper{
-flex-direction:column;
-}
-
-.left{
-height:45vh;
-}
-
-.right{
-height:55vh;
-}
-}
-
-</style>
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .lado-esquerdo {
+                display: none; /* Opcional: esconde a foto no mobile para focar no erro */
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="wrapper">
-<div class="left"></div>
+    <div class="container">
+        <div class="lado-esquerdo"></div>
 
-<div class="right">
-
-	<div class="content">
-   <img src="/img/logo-white.webp" alt="Rapozo" class="logo">
-
-<h1>404</h1>
-<p>Essa página não existe. Mas a imagem continua.</p>
-<a href="/">Voltar para o site</a>
-
-</div>
-
-
-
-
-
-</div>
+        <div class="lado-direito">
+            <img src="/img/logo-white.webp" alt="Logo" class="logo">
+            <h1>404</h1>
+            <p>Essa página não existe.</p>
+            <a href="/" class="btn-voltar">VOLTAR</a>
+        </div>
+    </div>
 
 </body>
 </html>
