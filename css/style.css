@@ -4449,7 +4449,7 @@ position:relative;
 
 .logo{
 position:absolute;
-top:40px;
+top:60px;
 left:60px;
 width:130px;
 opacity:.9;
@@ -4459,6 +4459,10 @@ opacity:.9;
 .right p,
 .right a{
 margin-left:0;
+}
+
+.right h1{
+margin-top:40px;
 }
 
 @media(max-width:768px){
