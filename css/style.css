@@ -4453,3 +4453,11 @@ left:60px;
 width:130px;
 }
 
+@media(max-width:768px){
+.logo{
+top:20px;
+left:20px;
+width:100px;
+}
+}
+
