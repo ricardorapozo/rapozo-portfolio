@@ -4,99 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Página não encontrada</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    
+    <link rel="stylesheet" href="style.css">
 
+    <style>
+        /* Estilos específicos apenas para o Layout da 404 */
         body, html {
             height: 100%;
-            overflow: hidden; /* Evita scroll desnecessário */
+            margin: 0;
         }
 
-        .container {
+        .container-404 {
             display: flex;
             height: 100vh;
             width: 100%;
         }
 
-        /* Lado Esquerdo: Imagem */
-        .lado-esquerdo {
+        .lado-foto {
             flex: 1;
-            background-image: url('/img/404.jpg'); /* FOTO */
+            background-image: url('/img/404.jpg');
             background-size: cover;
             background-position: center;
         }
 
-        /* Lado Direito: Bloco Preto */
-        .lado-direito {
+        .lado-preto {
             flex: 1;
-            background-color: #000;
-            color: #fff;
+            background-color: #000; /* Bloco preto solicitado */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            padding: 5%;
             text-align: center;
         }
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 30px;
+        /* Aqui você usa as tags que já existem no seu style.css */
+        .lado-preto h1 {
+            font-size: 6rem; /* Ajuste apenas o tamanho se necessário */
+            margin-bottom: 0.5rem;
         }
 
-        h1 {
-            font-size: 8rem;
-            font-weight: bold;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            opacity: 0.8;
-        }
-
-        .btn-voltar {
-            padding: 15px 40px;
-            background-color: #fff;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .btn-voltar:hover {
-            background-color: #ccc;
-        }
-
-        /* Responsividade para celulares */
+        /* Estilo para celulares */
         @media (max-width: 768px) {
-            .container {
+            .container-404 {
                 flex-direction: column;
             }
-            .lado-esquerdo {
-                display: none; /* Opcional: esconde a foto no mobile para focar no erro */
+            .lado-foto {
+                height: 40%;
+                flex: none;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="lado-esquerdo"></div>
+    <div class="container-404">
+        <div class="lado-foto"></div>
 
-        <div class="lado-direito">
-            <img src="/img/logo-white.webp" alt="Logo" class="logo">
-            <h1>400</h1>
+        <div class="lado-preto">
+            <img src="/img/logo-white.webp" alt="Logo" class="sua-classe-de-logo">
+            
+            <h1>404</h1>
             <p>Essa página não existe.</p>
-            <a href="/" class="btn-voltar">VOLTAR</a>
+            
+            <a href="/" class="seu-botao-padrao">VOLTAR</a>
         </div>
     </div>
 
