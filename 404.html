@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Página não encontrada | Rapozo</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+}
+
+.wrapper{
+display:flex;
+height:100vh;
+}
+
+.left{
+flex:1;
+background:url("/img/404.jpg") center/cover no-repeat;
+}
+
+.right{
+flex:1;
+background:#000;
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:60px;
+}
+
+.right h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.right p{
+opacity:.7;
+margin-bottom:30px;
+max-width:400px;
+}
+
+.right a{
+color:#fff;
+text-decoration:none;
+border-bottom:1px solid #fff;
+width:fit-content;
+}
+
+.right a:hover{
+opacity:.6;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+.wrapper{
+flex-direction:column;
+}
+
+.left{
+height:45vh;
+}
+
+.right{
+height:55vh;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="left"></div>
+
+<div class="right">
+<h1>404</h1>
+<p>Você chegou a um lugar que não existe.</p>
+<a href="/">Voltar para o site</a>
+</div>
+
+</div>
+
+</body>
+</html>

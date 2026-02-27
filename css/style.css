@@ -4376,3 +4376,60 @@ letter-spacing: 0.05em;
 .skillbar-bar {
 height: 1px;
 }
+
+/* Related Links SEO */
+.related-links{
+margin-top:60px;
+padding-top:30px;
+border-top:1px solid #222;
+font-size:0.9rem;
+opacity:0.8;
+}
+
+.related-links ul{
+list-style:none;
+padding:0;
+}
+
+.related-links li{
+margin-bottom:8px;
+}
+
+/*site footer*/
+.site-footer{
+margin-top:80px;
+padding:40px 20px;
+border-top:1px solid #111;
+display:flex;
+flex-direction:column;
+gap:20px;
+font-size:0.9rem;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#ffffffcc;
+transition:opacity 0.3s ease;
+}
+
+.footer-links a:hover{
+opacity:0.6;
+}
+
+.footer-copy{
+opacity:0.5;
+font-size:0.8rem;
+}
+
+@media (min-width:768px){
+  .footer-links{
+    flex-direction:row;
+    gap:30px;
+  }
+}
