@@ -4435,5 +4435,24 @@ font-size:0.8rem;
 }
 
 /* 404 */
+.lado-preto {
+    flex: 1;
+    background-color: #000; /* Fundo preto */
+    color: #fff;            /* ISSO CORRIGE: Força o texto a ser branco */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+}
 
+/* Caso o h1 ou p ainda teimem em ficar pretos por causa do style.css global, 
+   você pode ser mais específico: */
+
+.lado-preto h1, 
+.lado-preto p {
+    color: #fff !important; 
+}
 
