@@ -58,26 +58,38 @@
 </head>
 <body>
 
-	<div class="lado-foto" 
-     style="flex: 1; 
-            min-height: 100vh; 
-            background-image: url('/img/404.jpg') !important; 
-            background-size: cover !important; 
-            background-position: center !important; 
-            background-repeat: no-repeat !important;">
-	</div>
+<div class="container-404" style="display: flex !important; flex-direction: row !important; height: 100vh; width: 100%; margin: 0; padding: 0;">
 
-<div class="lado-preto" style="background-color: #000 !important; color: #fff !important;">
-    
-    <img src="/img/logo-white.webp" alt="Logo" class="sua-classe-de-logo">
-    
-    <h1 style="color: #fff !important; font-size: 6rem; margin: 0;">407</h1>
-    <p style="color: #fff !important; font-size: 1.5rem;">Essa página não existe.</p>
-    
-    <a href="/" class="seu-botao-padrao" 
-       style="color: #000 !important; background-color: #fff !important; padding: 10px 30px; text-decoration: none; display: inline-block; margin-top: 20px; border-radius: 5px; font-weight: bold;">
-       VOLTAR
-    </a>
+    <div class="lado-foto" 
+         style="flex: 1 !important; 
+                height: 100vh !important;
+                background-image: url('/img/404.jpg') !important; 
+                background-size: cover !important; 
+                background-position: center !important;">
+    </div>
+
+    <div class="lado-preto" 
+         style="flex: 1 !important; 
+                height: 100vh !important;
+                background-color: #000 !important; 
+                color: #fff !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+                padding: 40px !important;">
+        
+        <img src="/img/logo-white.webp" alt="Logo" style="max-width: 150px; margin-bottom: 20px;">
+        
+        <h1 style="color: #fff !important; font-size: 8rem; margin: 0; line-height: 1;">404</h1>
+        <p style="color: #fff !important; font-size: 1.5rem; margin-bottom: 30px;">Essa página não existe.</p>
+        
+        <a href="/" style="background-color: #fff !important; color: #000 !important; padding: 15px 40px; text-decoration: none; font-weight: bold; border-radius: 5px;">
+            VOLTAR
+        </a>
+    </div>
+
 </div>
 
 </body>
