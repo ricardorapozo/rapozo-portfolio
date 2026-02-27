@@ -4433,3 +4433,11 @@ font-size:0.8rem;
     gap:30px;
   }
 }
+
+/* 404 */
+.logo{
+width:140px;
+margin-bottom:50px;
+filter:brightness(0) invert(1);
+opacity:.85;
+}
