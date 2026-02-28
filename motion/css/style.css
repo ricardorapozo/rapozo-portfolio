@@ -3162,6 +3162,7 @@ font-size: 25px;
 color: #000;
 font-weight: 700;
 text-transform: uppercase;
+/*font-feature-settings:"case"; */
 letter-spacing: -0.04em;
 text-align: left;
 margin: -8px 0 45px -1px;
@@ -8548,3 +8549,21 @@ z-index: 1;
 	bottom: 115px;
   }
 }
+
+/* remover setas < > GPT stuff */
+.owl-prev,
+.owl-next{
+display:none !important;
+}
+
+/* remover numeros SKILLS < > GPT stuff */
+#services-lifting .post-number{
+display:none;
+
+.post-block{
+border-left:2px solid rgba(0,0,0,.15);
+padding-left:20px;
+}
+}
+
+/* Font Family Solução para acentos do GPT */
