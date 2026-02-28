@@ -309,14 +309,14 @@ $(function() {
         center: false,
         items: 1,
         margin: 20,
-        autoplay: false,
-        autoplaySpeed: 1000,
-        autoplayTimeout: 4000,
+        autoplay: true,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 8000,
         smartSpeed: 450,
         nav: true,
         navText: ["<i class='owl-custom ion-chevron-left'></i>", "<i class='owl-custom ion-chevron-right'></i>"],
         navContainer: '.owl-nav-custom-services',
-        autoplayHoverPause: false,
+        autoplayHoverPause: true,
         responsiveClass: true,
         responsive: {
             0: {
@@ -332,18 +332,18 @@ $(function() {
     });
     // 8.4. owl works carousel
     $("#works-carousel").owlCarousel({
-        loop: false,
+        loop: true,
         center: false,
         items: 1,
         margin: 20,
-        autoplay: false,
-        autoplaySpeed: 1000,
-        autoplayTimeout: 4000,
+        autoplay: true,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 4400,
         smartSpeed: 450,
         nav: true,
         navText: ["<i class='owl-custom ion-chevron-left'></i>", "<i class='owl-custom ion-chevron-right'></i>"],
         navContainer: '.owl-nav-custom-works',
-        autoplayHoverPause: false,
+        autoplayHoverPause: true,
         responsiveClass: true,
         responsive: {
             0: {
