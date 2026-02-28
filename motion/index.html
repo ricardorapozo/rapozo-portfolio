@@ -239,33 +239,34 @@
                             <!-- row start -->
                             <div class="row contact-modal-wrapper center-block-contact-modal-padding-bottom">
                                 <!-- contact form content start -->
-                                    <div id="contact-form">
-                                    <form action="https://formspree.io/f/mqedneqn" method="POST" id="form" name="send">
+                                <div id="contact-form">
+                                <form action="https://formspree.io/f/mqedneqn" method="POST">
 
-                                    <input type="hidden" name="_subject" value="Novo contato do site">
-                                    <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_subject" value="Novo contato do site">
+                                <input type="hidden" name="_captcha" value="false">
 
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <input class="requiredField name" id="name" name="name" placeholder="Nome" type="text">
-                                    </div>
+                                <div class="col-sm-4">
+                                <input name="name" placeholder="Nome" required>
+                                </div>
 
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <input class="requiredField email" id="email" name="email" placeholder="E-mail" type="email">
-                                    </div>
+                                <div class="col-sm-4">
+                                <input type="email" name="email" placeholder="E-mail" required>
+                                </div>
 
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <input class="requiredField subject" id="subject" name="subject" placeholder="Assunto" type="text">
-                                    </div>
+                                <div class="col-sm-4">
+                                <input name="subject" placeholder="Assunto">
+                                </div>
 
-                                    <div class="make-space">
-                                    <textarea class="requiredField message" id="message" name="message" placeholder="Mensagem"></textarea>
-                                    </div>
+                                <div class="make-space">
+                                <textarea name="message" placeholder="Mensagem" required></textarea>
+                                </div>
 
-                                    <div>
-                                    <button class="c-btn fullwidth" type="submit"><span>Enviar</span></button>
-                                    </div>
-                                    </form>
-                                    </div>
+                                <div>
+                                <button class="c-btn fullwidth" type="submit"><span>Enviar</span></button>
+                                </div>
+
+                                </form>
+                                </div>
                                 <!-- contact form content end -->
                             </div><!-- row end -->
                         </div><!-- center block end -->
