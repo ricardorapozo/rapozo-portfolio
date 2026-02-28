@@ -107,7 +107,7 @@
             </div><!-- language bar end -->
             <!-- template title start -->
             <div class="template-title fadeIn-element">
-                Motion Design
+                Motion Designer
             </div><!-- template title end -->
             <!-- location launcher start -->
             <div class="location-launcher fadeIn-element">
@@ -131,6 +131,7 @@
                         <li>
                             <a href="#services">Skills</a>
                         </li>
+
                         <li>
                             <a href="#works">Portfólio</a>
                         </li>
@@ -238,28 +239,22 @@
                             <!-- row start -->
                             <div class="row contact-modal-wrapper center-block-contact-modal-padding-bottom">
                                 <!-- contact form content start -->
-                                <div id="contact-form">
-                                    <form action="contact.php" id="form" method="post" name="send">
-                                        <!-- col start -->
-                                        <div class="col-sm-4 col-md-4 col-lg-4">
-                                            <input class="requiredField name" id="name" name="name" placeholder="Nome" type="text">
-                                        </div><!-- col end -->
-                                        <!-- col start -->
-                                        <div class="col-sm-4 col-md-4 col-lg-4">
-                                            <input class="requiredField email" id="email" name="email" placeholder="E-mail" type="text">
-                                        </div><!-- col end -->
-                                        <!-- col start -->
-                                        <div class="col-sm-4 col-md-4 col-lg-4">
-                                            <input class="requiredField subject" id="subject" name="subject" placeholder="Assunto" type="text">
-                                        </div><!-- col end -->
-                                        <div class="make-space">
-                                            <textarea class="requiredField message" id="message" name="message" placeholder="Mensagem"></textarea>
-                                        </div>
-                                        <div>
-                                            <button class="c-btn fullwidth" id="submit" type="submit"><span>Enviar</span></button>
-                                        </div>
-                                    </form>
-                                </div><!-- contact form content end -->
+                                <form
+                                  action="https://formspree.io/f/mqedneqn"
+                                  method="POST"
+                                >
+                                  <label>
+                                    E-mail:
+                                    <input type="email" name="email">
+                                  </label>
+                                  <label>
+                                    Mensagem:
+                                    <textarea name="message"></textarea>
+                                  </label>
+                                  <!-- your other form fields go here -->
+                                  <button type="submit">Enviar</button>
+                                </form>
+                                <!-- contact form content end -->
                             </div><!-- row end -->
                         </div><!-- center block end -->
                     </div><!-- center container end -->
