@@ -3,9 +3,9 @@
   
   ---
   
-  Template Name: Wox - Photography Portfolio Template
-  Author:  ex-nihilo
-  Version: 1.5
+  Template Name: Fox - Foto
+  Author:  RPZ
+  Version: .0000001
 */
 
 
@@ -85,7 +85,7 @@ $(".slick-services").each(function(i){
 
     setTimeout(function(){
         el.slick({
-            arrows:true,
+            arrows:false,
             infinite:true,
             slidesToShow:1,
             slidesToScroll:1,
@@ -141,14 +141,14 @@ $(".slick-services").each(function(i){
     // 4. owl carousel
     // 4.1. owl works carousel
     $("#works-page-img-carousel").owlCarousel({
-        loop: false,
+        loop: true,
         center: false,
         margin: 0,
-        autoplay: false,
-        autoplaySpeed: 1000,
-        autoplayTimeout: 5000,
-        smartSpeed: 450,
-        nav: true,
+        autoplay: true,
+        autoplaySpeed: 1200,
+        autoplayTimeout: 6000,
+        smartSpeed: 650,
+        nav: false,
         navText: ["<i class='owl-custom ion-chevron-left'></i>", "<i class='owl-custom ion-chevron-right'></i>"],
         responsive: {
             0: {
