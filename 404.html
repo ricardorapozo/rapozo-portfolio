@@ -18,6 +18,17 @@
             text-transform: uppercase; /* A Oswald costuma ficar ótima em maiúsculas */
         }
     </style>
+    <script>
+    function goBack(e) {
+        e.preventDefault();
+
+        if (document.referrer && document.referrer !== window.location.href) {
+            history.back();
+        } else {
+            window.location.href = "/";
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -112,7 +123,7 @@
         <img src="/img/logo-white.webp" alt="Logo" style="max-width: 120px; margin-bottom: 20px;">
         <h1>404</h1>
         <p>Essa página não existe.</p>
-        <a href="/" class="btn-voltar">VOLTAR</a>
+        <a href="#" class="btn-voltar" onclick="goBack(event)">VOLTAR</a>
     </div>
 </div>
 
