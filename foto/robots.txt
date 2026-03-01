@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /js/
-Disallow: /css/
-Disallow: /tmp/
-Disallow: /test/
-
-Sitemap: https://ricardorapozo.com/sitemap.xml
