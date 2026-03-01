@@ -2,27 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://ricardorapozo.com/</loc>
+    <loc>https://ricardorapozo.com/motion/</loc>
     <priority>1.0</priority>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://ricardorapozo.com/retrato-profissional</loc>
+    <loc>https://ricardorapozo.com/foto/</loc>
     <priority>0.9</priority>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://ricardorapozo.com/ensaio-para-criadores</loc>
-    <priority>0.9</priority>
+    <loc>https://ricardorapozo.com/foto/retrato-profissional</loc>
+    <priority>0.8</priority>
     <lastmod>2026-02-26</lastmod>
+    <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://ricardorapozo.com/ensaio-sensual-artistico</loc>
-    <priority>0.9</priority>
+    <loc>https://ricardorapozo.com/foto/ensaio-para-criadores</loc>
+    <priority>0.8</priority>
     <lastmod>2026-02-26</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ricardorapozo.com/foto/ensaio-sensual-artistico</loc>
+    <priority>0.8</priority>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>yearly</changefreq>
   </url>
 
 </urlset>
