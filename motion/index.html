@@ -192,12 +192,12 @@
 
             </div>
             <!-- hero bg end -->
-            <!-- location modal start -->
+            <!-- location modal start -- >
             <div class="location-modal">
-                <!-- google maps start -->
+                <! -- google maps start -- >
                 <div id="map-wrapper">
                     <div id="map"></div>
-                </div><!-- google maps end -->
+                </div><! -- google maps end -->
             </div><!-- location modal end -->
             <!-- contact modal start -->
             <div class="contact-modal">
@@ -251,22 +251,13 @@
 
                                 <input type="hidden" name="_subject" value="Novo contato do site">
                                 <input type="hidden" name="_captcha" value="false">
+<input class="requiredField name" name="name" placeholder="Nome" required>
 
-                                <div class="col-sm-4">
-                                <input name="name" placeholder="Nome" required>
-                                </div>
+<input class="requiredField email" type="email" name="email" placeholder="E-mail" required>
 
-                                <div class="col-sm-4">
-                                <input type="email" name="email" placeholder="E-mail" required>
-                                </div>
+<input class="requiredField subject" name="subject" placeholder="Assunto">
 
-                                <div class="col-sm-4">
-                                <input name="subject" placeholder="Assunto">
-                                </div>
-
-                                <div class="make-space">
-                                <textarea name="message" placeholder="Mensagem" required></textarea>
-                                </div>
+<textarea class="requiredField message" name="message" placeholder="Mensagem" required></textarea>
 
                                 <div>
                                 <button class="c-btn fullwidth" type="submit"><span>Enviar</span></button>

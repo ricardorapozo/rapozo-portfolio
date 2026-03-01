@@ -8568,3 +8568,27 @@ padding-left:20px;
 */
 
 /* Font Family Solução para acentos do GPT */
+
+/*Contact form style override (GPT)*/
+#contact-form input,
+#contact-form textarea{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid rgba(255,255,255,0.4);
+    color:#fff;
+    font-size:14px;
+    padding:12px 0;
+    outline:none;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder{
+    color:rgba(255,255,255,0.5);
+}
+
+#contact-form textarea{
+    min-height:120px;
+    resize:none;
+}
+
