@@ -3432,8 +3432,8 @@ filter: alpha(opacity=85);
 /* 26. language bar */
 .languages {
 position: absolute;
-top: 2px;
-right: 26px;
+top: 10px;
+right: 10px;
 width: 30px;
 height: 20px;
 overflow: hidden;
@@ -8592,7 +8592,7 @@ padding-left:20px;
     resize:none;
 }
 
-/* Language flags GPT */
+/* Language flags GPT * /
 
 .languages {
   position:absolute;
@@ -8612,14 +8612,14 @@ padding-left:20px;
   align-items:center;
   gap:6px;
 }
-
+*/
 .languages img {
   width:18px;
   height:18px;
   object-fit:cover;
   border-radius:50%;
 }
-
+/*
 .languages .divider {
   opacity:.6;
 }
