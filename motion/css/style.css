@@ -8614,10 +8614,18 @@ padding-left:20px;
 }
 */
 .languages img {
-  width: clamp(14px, 2vw, 18px);
-  height: clamp(14px, 2vw, 18px);
+  width:18px;
+  height:18px;
+  object-fit:cover;
+  border-radius:50%;
 }
 
+@media (max-width: 640px) {
+  .languages img {
+    width:14px;
+    height:14px;
+  }
+}
 /*
 .languages .divider {
   opacity:.6;
