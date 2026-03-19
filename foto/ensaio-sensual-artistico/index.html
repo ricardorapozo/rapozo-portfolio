@@ -1,130 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Página não encontrada</title>
+<meta charset="UTF-8">
+<title>Ensaio Sensual Artístico | Rapozo</title>
+<meta name="description" content="Ensaio sensual artístico com direção de imagem autoral. Expressão, estética e controle visual com abordagem intimista e segura.">
+<link rel="canonical" href="https://ricardorapozo.com/foto/ensaio-sensual-artistico">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="icon" href="/img/favicon.png" type="image/png">
 
-    <style>
-        /* Aplicando a Oswald em tudo que for texto dentro da 404 */
-        .container-404, .container-404 h1, .container-404 p, .container-404 a {
-            font-family: 'Oswald', sans-serif !important;
-            text-transform: uppercase; /* A Oswald costuma ficar ótima em maiúsculas */
-        }
-    </style>
-    <script>
-    function goBack(e) {
-        e.preventDefault();
-
-        if (document.referrer && document.referrer !== window.location.href) {
-            history.back();
-        } else {
-            window.location.href = "/";
-        }
-    }
-    </script>
-</head>
-<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-    /* Importante: Definir a fonte e o comportamento base */
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: 'Oswald', sans-serif !important;
-    }
 
-    /* O CONTAINER PRINCIPAL */
-    .container-404 {
-        display: flex;
-        flex-direction: row; /* Lado a lado no Desktop */
-        width: 100%;
-        height: 100vh;
+/* BASE */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    color: #e6e6e6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* LAYOUT */
+.container-servico {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* IMAGEM */
+.lado-foto {
+    width: 60%;
+    position: relative;
+    background: url('/foto/img/ensaios/sensual.jpg') no-repeat center;
+    background-size: cover;
+    background-position: 50% center;
+}
+
+.lado-foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
+/* TEXTO */
+.lado-preto {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 45px;
+    max-width: 460px;
+}
+
+/* H1 */
+.lado-preto h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+}
+
+/* LEAD */
+.lead {
+    font-size: 0.85rem;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 12px;
+}
+
+/* TEXTO */
+.lado-preto p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    color: #cfcfcf;
+    opacity: 0.85;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+.lado-preto .lead + p {
+    opacity: 0.95;
+    font-size: 1rem;
+}
+
+/* QUEDA */
+.lado-preto p + p {
+    opacity: 0.7;
+}
+
+/* SEÇÕES */
+.lado-preto h2 {
+    font-size: 0.78rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+/* DIREÇÃO = PROTAGONISTA */
+.lado-preto h2:nth-of-type(2) {
+    opacity: 0.8;
+}
+
+/* RITMO */
+.lado-preto h2 + p {
+    margin-bottom: 16px;
+}
+
+/* LINKS */
+.lado-preto a {
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.lado-preto a:hover {
+    opacity: 1;
+}
+
+/* CTA */
+.c-btn {
+    margin-top: 50px;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.c-btn:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container-servico {
+        flex-direction: column;
+        height: auto;
     }
 
     .lado-foto {
-        flex: 1;
-        background-image: url('/img/404.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 50vh; /* Garante que a foto apareça no mobile */
+        width: 100%;
+        height: 45vh;
     }
 
     .lado-preto {
-        flex: 1;
-        background-color: #000;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px;
+        width: 100%;
+        padding: 35px 20px;
     }
 
-    /* Estilização dos textos com a Oswald */
     .lado-preto h1 {
-        font-size: 8rem;
-        margin: 0;
-        line-height: 1;
-        font-weight: 700;
-        color: #fff !important;
+        font-size: 1.6rem;
     }
+}
 
-    .lado-preto p {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        color: #fff !important;
-        text-transform: uppercase;
-    }
-
-    .btn-voltar {
-        background-color: #fff !important;
-        color: #000 !important;
-        padding: 15px 40px;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    /* A MÁGICA DO MOBILE */
-    @media (max-width: 768px) {
-        .container-404 {
-            flex-direction: column; /* Foto em cima, bloco preto embaixo */
-        }
-        
-        .lado-foto {
-            flex: none;
-            height: 40vh; /* Define um tamanho fixo para a foto no topo */
-        }
-
-        .lado-preto {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .lado-preto h1 {
-            font-size: 5rem; /* Diminui o 404 para não quebrar a tela */
-        }
-    }
 </style>
 
-<div class="container-404">
+</head>
+
+<body>
+
+<div class="container-servico">
+
     <div class="lado-foto"></div>
 
     <div class="lado-preto">
-        <img src="/img/logo-white.webp" alt="Logo" style="max-width: 120px; margin-bottom: 20px;">
-        <h1>404</h1>
-        <p>Essa página não existe.</p>
-        <a href="#" class="btn-voltar" onclick="goBack(event)">VOLTAR</a>
+
+        <h1>Ensaio sensual artístico com direção de imagem</h1>
+
+        <p class="lead">Expressão, presença e controle visual</p>
+
+        <p>
+        Não é sobre exposição. É sobre controle. Sobre como você escolhe ser visto.
+        </p>
+
+        <p>
+        O ensaio é construído com direção precisa de luz, atmosfera e gesto — imagens que sugerem, nunca entregam tudo.
+        </p>
+
+        <h2>Para quem é</h2>
+        <p>
+        Pessoas que querem explorar a própria imagem com intenção, estética e autonomia.
+        </p>
+
+        <h2>Direção de imagem</h2>
+        <p>
+        Cada detalhe é conduzido. Postura, olhar, ritmo e silêncio visual. O corpo não é exibido — é interpretado.
+        </p>
+
+        <h2>Resultado</h2>
+        <p>
+        Fotografias com linguagem editorial, tensão estética e leitura sensorial.
+        </p>
+
+        <p>
+        Imagens que revelam presença sem perder controle.
+        </p>
+
+        <h2>Outros ensaios disponíveis</h2>
+
+        <p>
+        Para retratos com foco profissional, veja o <a href="/foto/retrato-profissional">retrato profissional</a>.
+        </p>
+
+        <p>
+        Para presença digital, veja o <a href="/foto/ensaio-para-criadores">ensaio para criadores</a>.
+        </p>
+
+        <button class="c-btn" onclick="window.location.href='/#contato'">
+            DIRIGIR MINHA IMAGEM
+        </button>
+
     </div>
+
 </div>
 
 </body>
