@@ -2,104 +2,234 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Ensaio para Criadores de Conteúdo | Rapozo</title>
-<meta name="description" content="Ensaio fotográfico profissional para criadores de conteúdo, influencers e profissionais digitais que precisam de presença visual forte e autoral.">
+<title>Ensaio para Criadores | Rapozo</title>
+<meta name="description" content="Ensaios fotográficos profissionais para criadores de conteúdo que precisam de presença visual forte e autoral.">
 <link rel="canonical" href="https://ricardorapozo.com/foto/ensaio-para-criadores">
 
-<meta name="author" content="Ricardo Rapozo">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="/css/style.css">
 <link rel="icon" href="/img/favicon.png" type="image/png">
-<link rel="alternate" hreflang="pt-br" href="https://ricardorapozo.com/foto/ensaio-para-criadores">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Ensaio para Criadores | Rapozo">
-<meta property="og:description" content="Ensaios autorais para criadores que entendem o poder da imagem na internet.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ricardorapozo.com/foto/ensaio-para-criadores">
-<meta property="og:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
-<meta property="og:image:alt" content="Ensaio fotográfico profissional para criadores de conteúdo">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Ensaio fotográfico para criadores de conteúdo",
-  "description": "Ensaios fotográficos profissionais para criadores de conteúdo e profissionais digitais.",
-  "provider": {
-    "@type": "Person",
-    "name": "Ricardo Rapozo",
-    "url": "https://ricardorapozo.com"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "São Paulo"
-  },
-  "url": "https://ricardorapozo.com/foto/ensaio-para-criadores"
+<style>
+
+/* BASE */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    color: #e6e6e6;
+    font-family: 'Inter', sans-serif;
 }
-</script>
 
-<!-- styles -->
-<link href="css/plugins.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+/* LAYOUT */
+.container-servico {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* IMAGEM */
+.lado-foto {
+    width: 60%;
+    position: relative;
+    background: url('/foto/img/ensaios/criadores.jpg') no-repeat center;
+    background-size: cover;
+    background-position: 55% center;
+}
+
+.lado-foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+/* TEXTO */
+.lado-preto {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 45px;
+    max-width: 460px;
+}
+
+/* H1 */
+.lado-preto h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+}
+
+/* LEAD */
+.lead {
+    font-size: 0.85rem;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 12px;
+}
+
+/* TEXTO BASE */
+.lado-preto p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    color: #cfcfcf;
+    opacity: 0.85;
+}
+
+/* PRIMEIRO PARÁGRAFO */
+.lado-preto .lead + p {
+    opacity: 0.95;
+    font-size: 1rem;
+}
+
+/* QUEDA DE PESO */
+.lado-preto p + p {
+    opacity: 0.7;
+}
+
+/* SEÇÕES */
+.lado-preto h2 {
+    font-size: 0.78rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+/* RITMO */
+.lado-preto h2 + p {
+    margin-bottom: 16px;
+}
+
+/* LINKS */
+.lado-preto a {
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.lado-preto a:hover {
+    opacity: 1;
+}
+
+/* CTA */
+.c-btn {
+    margin-top: 50px;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.c-btn:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container-servico {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lado-foto {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .lado-preto {
+        width: 100%;
+        padding: 35px 20px;
+    }
+
+    .lado-preto h1 {
+        font-size: 1.6rem;
+    }
+}
+
+</style>
 
 </head>
 
 <body>
 
-<section class="page">
+<div class="container-servico">
 
-<h1>Ensaio fotográfico para criadores de conteúdo</h1>
+    <div class="lado-foto"></div>
 
-<h2>Direção de imagem profissional para presença digital</h2>
+    <div class="lado-preto">
 
-<p>
-Criadores vivem de imagem. E imagem forte não nasce por acaso — é construída.
-Cada ensaio é dirigido para traduzir identidade visual, posicionamento e estética pessoal em fotografias que comunicam presença.
-</p>
+        <h1>Ensaios para criadores com direção de imagem autoral</h1>
 
-<p>
-O objetivo não é apenas produzir fotos bonitas. É criar material visual que sustente autoridade, estilo e reconhecimento online.
-</p>
+        <p class="lead">Fotografia para presença digital em São Paulo</p>
 
-<h2>Para quem é</h2>
-<p>
-Criadores de conteúdo, influencers, streamers, artistas digitais, profissionais de plataformas visuais e pessoas cuja imagem faz parte do próprio trabalho.
-</p>
+        <p>
+        Criadores vivem de imagem. E imagem forte não nasce por acaso — é construída com direção, intenção e linguagem visual.
+        </p>
 
-<h2>Direção estética</h2>
-<p>
-Expressão, postura, ritmo visual e atmosfera são conduzidos durante o ensaio. Nada é deixado ao acaso. A sessão funciona como direção de cena — pensada para revelar identidade e não para repetir poses prontas.
-</p>
+        <p>
+        O ensaio é pensado para traduzir identidade, posicionamento e estética em fotografias que comunicam presença e diferenciam você no ambiente digital.
+        </p>
 
-<h2>Resultado visual</h2>
-<p>
-Imagens com linguagem editorial, impacto visual e assinatura estética. Fotografias que funcionam em perfis, capas, divulgação e posicionamento digital.
-</p>
+        <h2>Para quem é</h2>
+        <p>
+        Criadores de conteúdo, influencers, streamers, artistas digitais e profissionais cuja imagem faz parte do próprio trabalho.
+        </p>
 
-<p>
-Direção discreta, ambiente seguro e orientação completa durante todo o ensaio.
-</p>
+        <h2>Direção de imagem</h2>
+        <p>
+        Expressão, postura e atmosfera são conduzidos como cena. Nada é deixado ao acaso — o objetivo não é repetir poses, mas revelar identidade.
+        </p>
 
-<h2>Outras possibilidades</h2>
+        <h2>Resultado</h2>
+        <p>
+        Imagens com linguagem editorial, impacto visual e assinatura estética.
+        </p>
 
-<p>
-Se o foco for retratos profissionais com abordagem mais institucional,
-conheça o <a href="/foto/retrato-profissional">retrato profissional dirigido</a>.
-</p>
+        <p>
+        Fotografias que funcionam em perfis, capas e posicionamento digital.
+        </p>
 
-<p>
-Para uma proposta mais sensorial e intimista,
-veja o <a href="/foto/ensaio-sensual-artistico">ensaio sensual artístico</a>.
-</p>
+        <h2>Outros ensaios disponíveis</h2>
 
-<a href="/#contato" class="cta">Agendar ensaio para criador</a>
+        <p>
+        Para retratos com abordagem mais institucional, veja o <a href="/foto/retrato-profissional">retrato profissional</a>.
+        </p>
 
-</section>
+        <p>
+        Para uma proposta mais sensorial, veja o <a href="/foto/ensaio-sensual-artistico">ensaio sensual artístico</a>.
+        </p>
+
+        <button class="c-btn" onclick="window.location.href='/#contato'">
+            AGENDAR ENSAIO
+        </button>
+
+    </div>
+
+</div>
 
 </body>
 </html>
