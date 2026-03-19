@@ -67,6 +67,23 @@
     letter-spacing: 1px;
 }
 
+.grid-foto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.grid-foto img:first-child {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.grid-foto .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
 /* Base */
 body, html {
     margin: 0;
