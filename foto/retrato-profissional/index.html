@@ -16,15 +16,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-
 /* BASE */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     background: #000;
-    color: #eaeaea;
+    color: #e6e6e6;
     font-family: 'Inter', sans-serif;
 }
 
@@ -44,7 +42,6 @@ body, html {
     background-position: 60% center;
 }
 
-/* OVERLAY SUAVE (cola imagem com texto) */
 .lado-foto::after {
     content: "";
     position: absolute;
@@ -52,53 +49,64 @@ body, html {
     background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0));
 }
 
-/* TEXTO MAIS COMPACTO */
+/* TEXTO */
 .lado-preto {
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 45px; /* reduzido */
-    max-width: 480px; /* limita largura */
+    padding: 60px 45px;
+    max-width: 460px;
 }
 
-/* TIPOGRAFIA */
-h1, h2 {
-    font-family: 'Oswald', sans-serif;
-}
-
+/* H1 = ÚNICA VOZ FORTE */
 .lado-preto h1 {
+    font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-    line-height: 1.1; /* mais compacto */
-    font-weight: 600;
-    margin-bottom: 18px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 20px;
     letter-spacing: -0.3px;
     text-transform: uppercase;
 }
 
-.lado-preto h2 {
-    font-size: 1rem;
+/* SUBHEAD (sem bold, sem drama) */
+.lado-preto p strong {
     font-weight: 400;
-    opacity: 0.6;
-    margin-top: 28px;
-    margin-bottom: 10px;
+    opacity: 0.7;
 }
 
-/* TEXTO MAIS DENSO */
+/* TEXTO BASE */
 .lado-preto p {
     font-size: 0.95rem;
-    line-height: 1.45; /* reduzido */
+    line-height: 1.45;
     margin-bottom: 12px;
-    max-width: 420px;
+    color: #cfcfcf;
+}
+
+/* SEÇÕES (h2 vira label, não título) */
+.lado-preto h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-top: 24px;
+    margin-bottom: 6px;
 }
 
 /* LINKS */
 .lado-preto a {
     color: #fff;
     text-decoration: underline;
+    opacity: 0.8;
 }
 
-/* CTA MAIS FIRME */
+.lado-preto a:hover {
+    opacity: 1;
+}
+
+/* CTA LIMPO */
 .c-btn {
     margin-top: 40px;
     width: 100%;
@@ -107,7 +115,7 @@ h1, h2 {
     padding: 14px;
     border: none;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.2s ease;
@@ -118,30 +126,6 @@ h1, h2 {
     color: #fff;
     border: 1px solid #fff;
 }
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .container-servico {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .lado-foto {
-        width: 100%;
-        height: 45vh;
-    }
-
-    .lado-preto {
-        width: 100%;
-        padding: 35px 20px;
-    }
-
-    .lado-preto h1 {
-        font-size: 1.6rem;
-    }
-}
-
-</style>
 
 </head>
 
