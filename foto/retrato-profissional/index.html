@@ -61,21 +61,24 @@ body, html {
     max-width: 460px;
 }
 
-/* H1 = ÚNICA VOZ FORTE */
+/* H1 */
 .lado-preto h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
     line-height: 1.1;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     letter-spacing: -0.3px;
     text-transform: uppercase;
 }
 
-/* SUBHEAD (sem bold, sem drama) */
-.lado-preto p strong {
-    font-weight: 400;
-    opacity: 0.7;
+/* LEAD */
+.lead {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 16px;
 }
 
 /* TEXTO BASE */
@@ -84,18 +87,22 @@ body, html {
     line-height: 1.45;
     margin-bottom: 12px;
     color: #cfcfcf;
+    opacity: 0.85;
 }
 
-/* SEÇÕES (h2 vira label, não título) */
+/* QUEDA DE PESO */
+.lado-preto p + p {
+    opacity: 0.7;
+}
+
+/* SEÇÕES */
 .lado-preto h2 {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    opacity: .8;
-    margin-top: 24px;
+    opacity: 0.4;
+    margin-top: 32px;
     margin-bottom: 6px;
-    color: #cfcfcf;
 }
 
 /* LINKS */
@@ -109,9 +116,9 @@ body, html {
     opacity: 1;
 }
 
-/* CTA LIMPO */
+/* CTA */
 .c-btn {
-    margin-top: 40px;
+    margin-top: 50px;
     width: 100%;
     background: #fff;
     color: #000;
@@ -130,6 +137,28 @@ body, html {
     border: 1px solid #fff;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+    .container-servico {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lado-foto {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .lado-preto {
+        width: 100%;
+        padding: 35px 20px;
+    }
+
+    .lado-preto h1 {
+        font-size: 1.6rem;
+    }
+}
+
 </style>
 
 </head>
@@ -146,7 +175,7 @@ body, html {
 
         <p class="lead">Fotógrafo de retrato profissional em São Paulo</p>
 
-        <p> 
+        <p>
         Ensaios disponíveis em São Paulo e região, com direção personalizada para cada projeto e identidade visual.
         </p>
 
