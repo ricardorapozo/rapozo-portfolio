@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Ensaio Sensual Artístico | Rapozo</title>
-<meta name="description" content="Ensaio sensual artístico com direção de imagem autoral. Fotografias intimistas, elegantes e seguras para expressão corporal e identidade visual.">
-<link rel="canonical" href="https://ricardorapozo.com/foto/ensaio-sensual-artistico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página não encontrada</title>
 
-<meta name="author" content="Ricardo Rapozo">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" href="/img/favicon.png" type="image/png">
-<link rel="alternate" hreflang="pt-br" href="https://ricardorapozo.com/foto/ensaio-sensual-artistico">
+    <link rel="stylesheet" href="style.css">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Ensaio Sensual Artístico | Rapozo">
-<meta property="og:description" content="Direção de imagem intimista e autoral para ensaios sensuais com elegância e segurança.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ricardorapozo.com/ensaio-sensual-artistico">
-<meta property="og:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
-<meta property="og:image:alt" content="Ensaio sensual artístico com direção de luz cinematográfica">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <style>
+        /* Aplicando a Oswald em tudo que for texto dentro da 404 */
+        .container-404, .container-404 h1, .container-404 p, .container-404 a {
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase; /* A Oswald costuma ficar ótima em maiúsculas */
+        }
+    </style>
+    <script>
+    function goBack(e) {
+        e.preventDefault();
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"ProfessionalService",
-"name":"Rapozo — Direção de Imagem",
-"url":"https://ricardorapozo.com/foto/",
-"areaServed":{
- "@type":"City",
- "name":"São Paulo"
-},
-"description":"Ensaio sensual artístico com direção de imagem autoral e abordagem intimista.",
-"serviceType":"Ensaio sensual artístico",
-"provider":{
- "@type":"Person",
- "name":"Ricardo Rapozo"
-}
-}
-</script>
-
+        if (document.referrer && document.referrer !== window.location.href) {
+            history.back();
+        } else {
+            window.location.href = "/";
+        }
+    }
+    </script>
 </head>
-
 <body>
 
-<section class="page">
+<style>
+    /* Importante: Definir a fonte e o comportamento base */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Oswald', sans-serif !important;
+    }
 
-<h1>Ensaio sensual artístico com direção de imagem autoral</h1>
+    /* O CONTAINER PRINCIPAL */
+    .container-404 {
+        display: flex;
+        flex-direction: row; /* Lado a lado no Desktop */
+        width: 100%;
+        height: 100vh;
+    }
 
-<h2>Expressão corporal com estética, elegância e segurança</h2>
+    .lado-foto {
+        flex: 1;
+        background-image: url('/img/404.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh; /* Garante que a foto apareça no mobile */
+    }
 
-<p>
-Um ensaio sensual não é sobre exposição. É sobre expressão.
-Cada sessão é construída com direção cuidadosa de luz, atmosfera e postura para criar imagens sofisticadas, sensoriais e visualmente fortes.
-</p>
+    .lado-preto {
+        flex: 1;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
 
-<p>
-A proposta é revelar presença, identidade e confiança — nunca vulgaridade.
-A estética é artística, cinematográfica e personalizada para cada pessoa.
-</p>
+    /* Estilização dos textos com a Oswald */
+    .lado-preto h1 {
+        font-size: 8rem;
+        margin: 0;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff !important;
+    }
 
-<h2>Para quem é</h2>
-<p>
-Pessoas que desejam explorar sua imagem de forma elegante, criadores de conteúdo adulto que buscam qualidade estética superior e profissionais que trabalham com a própria presença visual.
-</p>
+    .lado-preto p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: #fff !important;
+        text-transform: uppercase;
+    }
 
-<h2>Direção e ambiente</h2>
-<p>
-O ensaio é conduzido com orientação clara, respeito absoluto e ambiente seguro.
-Cada detalhe é pensado para que você se sinta confortável, confiante e no controle da própria imagem.
-</p>
+    .btn-voltar {
+        background-color: #fff !important;
+        color: #000 !important;
+        padding: 15px 40px;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 
-<h2>Resultado visual</h2>
-<p>
-Fotografias com linguagem editorial, iluminação dramática e acabamento refinado.
-Imagens que valorizam forma, textura e atmosfera.
-</p>
+    /* A MÁGICA DO MOBILE */
+    @media (max-width: 768px) {
+        .container-404 {
+            flex-direction: column; /* Foto em cima, bloco preto embaixo */
+        }
+        
+        .lado-foto {
+            flex: none;
+            height: 40vh; /* Define um tamanho fixo para a foto no topo */
+        }
 
-<p>
-Sigilo, profissionalismo e direção personalizada durante todo o processo.
-</p>
+        .lado-preto {
+            flex: 1;
+            padding: 20px;
+        }
 
-<a href="/#contato" class="cta">Agendar ensaio artístico</a>
+        .lado-preto h1 {
+            font-size: 5rem; /* Diminui o 404 para não quebrar a tela */
+        }
+    }
+</style>
 
-<h2>Outras abordagens</h2>
+<div class="container-404">
+    <div class="lado-foto"></div>
 
-<p>
-Para retratos com foco profissional e posicionamento visual,
-veja o <a href="/foto/retrato-profissional">ensaio de retrato profissional</a>.
-</p>
-
-<p>
-Se você trabalha com imagem na internet,
-conheça o <a href="/foto/ensaio-para-criadores">ensaio para criadores de conteúdo</a>.
-</p>
-
-</section>
+    <div class="lado-preto">
+        <img src="/img/logo-white.webp" alt="Logo" style="max-width: 120px; margin-bottom: 20px;">
+        <h1>404</h1>
+        <p>Essa página não existe.</p>
+        <a href="#" class="btn-voltar" onclick="goBack(event)">VOLTAR</a>
+    </div>
+</div>
 
 </body>
 </html>

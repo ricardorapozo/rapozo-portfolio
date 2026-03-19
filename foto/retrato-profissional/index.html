@@ -10,97 +10,229 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/foto/css/style.css">
 <link rel="icon" href="/img/favicon.png" type="image/png">
 <link rel="alternate" hreflang="pt-br" href="https://ricardorapozo.com/foto/retrato-profissional">
 
-<!--Open Graph-->
+<!-- Open Graph -->
 <meta property="og:title" content="Retrato Profissional | Rapozo">
 <meta property="og:description" content="Retratos com direção de imagem autoral para criadores e profissionais digitais.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ricardorapozo.com/retrato-profissional">
+<meta property="og:url" content="https://ricardorapozo.com/foto/retrato-profissional">
 <meta property="og:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
 <meta property="og:image:alt" content="Retrato profissional dirigido por Ricardo Rapozo">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
 
-<script type="application/ld+json">
-
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+<script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"ProfessionalService",
-"name":"Rapozo — Direção de Imagem",
-"url":"https://ricardorapozo.com/foto/",
-"areaServed":{
- "@type":"City",
- "name":"São Paulo"
-},
-"description":"Retratos profissionais com direção de imagem autoral para criadores, artistas e profissionais digitais.",
-"serviceType":"Fotografia de retrato profissional",
-"provider":{
- "@type":"Person",
- "name":"Ricardo Rapozo"
-}
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Retrato profissional com direção de imagem",
+  "description": "Retratos profissionais com direção de imagem autoral para criadores, artistas e profissionais digitais.",
+  "provider": {
+    "@type": "Person",
+    "name": "Ricardo Rapozo",
+    "url": "https://ricardorapozo.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "São Paulo"
+  },
+  "url": "https://ricardorapozo.com/foto/retrato-profissional"
 }
 </script>
+
+<style>
+
+.container-servico h1,
+.container-servico h2,
+.container-servico p {
+    all: unset;
+    display: block;
+}
+
+.container-servico .c-btn {
+    margin-top: 30px;
+    align-self: flex-start;
+}
+
+.container-servico .c-btn span {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Base */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #000;
+    color: #eaeaea;
+}
+
+/* Container */
+.container-servico {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Imagem */
+.lado-foto {
+    flex: 1;
+    background-image: url('/foto/img/ensaios/profissional.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
+/* Conteúdo */
+.lado-preto {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    max-width: 640px;
+}
+
+/* Tipografia */
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.lado-preto h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;    
+}
+
+.lado-preto h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.lado-preto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 520px;
+}
+
+/* Links */
+.lado-preto a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* CTA */
+.cta {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container-servico {
+        flex-direction: column;
+    }
+
+    .lado-foto {
+        height: 40vh;
+    }
+
+    .lado-preto {
+        padding: 30px;
+    }
+
+    .lado-preto h1 {
+        font-size: 1.8rem;
+    }
+}
+
+</style>
 
 </head>
 
 <body>
 
-<section class="page">
+<div class="container-servico">
 
-<h1>Retratos profissionais com direção de imagem autoral</h1>
+    <div class="lado-foto"></div>
 
-<h2>Fotógrafo de retrato profissional em São Paulo</h2>
+    <div class="lado-preto">
 
-<p>
-Ensaios disponíveis em São Paulo e região, com direção personalizada para cada projeto e identidade visual.
-</p>
+        <img src="/img/logo-white.webp" alt="Logo" style="max-width: 120px; margin-bottom: 20px;">
 
-<p>
-Retratos não são apenas fotos. São presença visual.
-Cada ensaio é construído com direção estética, luz e atmosfera para revelar identidade e força visual.
-</p>
+        <h1>Retratos profissionais com direção de imagem autoral</h1>
 
-<h2>Para quem é</h2>
-<p>
-Criadores de conteúdo, artistas, profissionais digitais e pessoas que entendem o valor de uma imagem forte.
-</p>
+        <h2>Fotógrafo de retrato profissional em São Paulo</h2>
 
-<h2>Direção de imagem</h2>
-<p>
-Nada de poses prontas. A expressão é dirigida como cena cinematográfica — postura, olhar e ritmo visual.
-</p>
+        <p>
+        Ensaios disponíveis em São Paulo e região, com direção personalizada para cada projeto e identidade visual.
+        </p>
 
-<h2>Resultado</h2>
-<p>
-Imagens que parecem editoriais.
-Mas são você.
-</p>
+        <p>
+        Retratos não são apenas fotos. São presença visual.
+        Cada ensaio é construído com direção estética, luz e atmosfera para revelar identidade e força visual.
+        </p>
 
-<p>Direção discreta, ambiente seguro e orientação completa durante todo o ensaio.</p>
+        <h2>Para quem é</h2>
+        <p>
+        Criadores de conteúdo, artistas, profissionais digitais e pessoas que entendem o valor de uma imagem forte.
+        </p>
 
-<h2>Outros ensaios disponíveis</h2>
+        <h2>Direção de imagem</h2>
+        <p>
+        Nada de poses prontas. A expressão é dirigida como cena cinematográfica — postura, olhar e ritmo visual.
+        </p>
 
-<p>
-Se você busca uma abordagem voltada para presença digital,
-conheça também o <a href="/foto/ensaio-para-criadores">ensaio para criadores de conteúdo</a>.
-</p>
+        <h2>Resultado</h2>
+        <p>
+        Imagens com linguagem editorial, impacto visual e assinatura estética.
+        </p>
 
-<p>
-Para uma proposta mais intimista e artística,
-veja o <a href="/foto/ensaio-sensual-artistico">ensaio sensual artístico</a>.
-</p>
+        <p>Direção discreta, ambiente seguro e orientação completa durante todo o ensaio.</p>
 
-<a href="/#contato" class="cta">Agendar ensaio fotográfico</a>
+        <h2>Outros ensaios disponíveis</h2>
 
-</section>
+        <p>
+        Para presença digital, veja o
+        <a href="/foto/ensaio-para-criadores">ensaio para criadores de conteúdo</a>.
+        </p>
+
+        <p>
+        Para uma abordagem mais artística,
+        veja o <a href="/foto/ensaio-sensual-artistico">ensaio sensual artístico</a>.
+        </p>
+
+<button class="c-btn" onclick="window.location.href='https://ricardorapozo.com/foto/#contato'">
+    <span>Agendar ensaio fotográfico</span>
+</button>
+
+    </div>
+
+</div>
 
 </body>
-
 </html>
