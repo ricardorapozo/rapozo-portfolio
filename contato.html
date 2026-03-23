@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+        <title>Ricardo Rapozo — Motion Designer Sênior | Direção, Animação e Composição</title>
+
+        <meta name="description" content="Motion Designer Sênior especializado em direção de animação, animação 2D e composição. Narrativas visuais guiadas por ritmo, intenção e identidade estética consistente.">
+
+        <meta name="author" content="Ricardo Rapozo">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="canonical" href="https://ricardorapozo.com/contato">
+        <link rel="icon" href="/img/favicon.png" type="image/png">
+        
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Ricardo Rapozo — Direção e Motion Design">
+        <meta property="og:description" content="Direção, animação e composição aplicadas a projetos com linguagem visual estratégica e impacto narrativo.">
+        <meta property="og:url" content="https://ricardorapozo.com">
+        <meta property="og:image" content="https://ricardorapozo.com/img/preview.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Frame de motion design autoral por Ricardo Rapozo">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="Ricardo Rapozo">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* VOLTAR */
+.back-home {
+  position:fixed;
+  top:30px;
+  right:30px;
+  color:#fff;
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:2px;
+  opacity:0.5;
+  z-index:10;
+}
+
+/* GRID */
+.contact-container {
+  display:flex;
+  height:100vh;
+}
+
+/* ESQUERDA */
+.contact-left {
+  width:50%;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.6s;
+}
+
+.contact-left:hover {
+  transform:scale(1.03);
+}
+
+.contact-left iframe {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:177.77vh;
+  height:100vh;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:0.6s;
+}
+
+.contact-left:hover iframe {
+  transform:translate(-50%,-50%) scale(1.05);
+}
+
+.contact-left::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.3);
+}
+
+/* PLAY */
+.play {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:90px;
+  height:90px;
+}
+
+.play::before {
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  border:1px solid #fff;
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+
+.play::after {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-40%,-50%);
+  border-left:18px solid #fff;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+}
+
+@keyframes pulse {
+  0% { transform:scale(1); opacity:0.6; }
+  70% { transform:scale(1.4); opacity:0; }
+}
+
+/* DIREITA */
+.contact-right {
+  width:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px;
+}
+
+.contact-card {
+  max-width:420px;
+  border:1px solid rgba(255,255,255,0.1);
+  padding:50px;
+}
+
+/* TÍTULO */
+.title {
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+/* INFO */
+.info {
+  font-size:12px;
+  opacity:0.5;
+  margin-bottom:40px;
+  line-height:1.6;
+}
+
+/* INPUTS */
+input, textarea {
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  margin-bottom:30px;
+  color:#fff;
+  padding:10px 0;
+}
+
+/* BOTÃO */
+button {
+  width:100%;
+  padding:14px;
+  border:1px solid rgba(255,255,255,0.3);
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* MODAL */
+.modal {
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s;
+  z-index:9999;
+}
+
+.modal.active {
+  opacity:1;
+  pointer-events:all;
+}
+
+.modal iframe {
+  width:90%;
+  max-width:1200px;
+  aspect-ratio:16/9;
+}
+
+.close {
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="/" class="back-home">← Voltar</a>
+
+<div class="contact-container">
+
+  <!-- ESQUERDA -->
+  <div class="contact-left" id="open">
+
+    <iframe src="https://player.vimeo.com/video/1071968192?autoplay=1&muted=1&background=1&loop=1"></iframe>
+
+    <div class="play"></div>
+
+  </div>
+
+  <!-- DIREITA -->
+  <div class="contact-right">
+    <div class="contact-card">
+
+      <div class="title">ENVIE SUA MENSAGEM</div>
+
+      <div class="info">
+        São Paulo — Brasil<br>
+        +55 (11) 98302-2222
+      </div>
+
+      <form action="https://formspree.io/f/mqedneqn" method="POST">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem"></textarea>
+        <button>Enviar</button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="close" id="close">×</div>
+  <iframe id="player" src="" allow="autoplay; fullscreen"></iframe>
+</div>
+
+<script>
+const open = document.getElementById("open");
+const modal = document.getElementById("modal");
+const player = document.getElementById("player");
+const close = document.getElementById("close");
+
+open.onclick = () => {
+  player.src = "https://player.vimeo.com/video/1071968192?autoplay=1";
+  modal.classList.add("active");
+};
+
+function fechar(){
+  modal.classList.remove("active");
+  player.src = "";
+}
+
+close.onclick = fechar;
+
+modal.onclick = (e) => {
+  if(e.target === modal) fechar();
+};
+
+document.onkeydown = (e) => {
+  if(e.key === "Escape") fechar();
+};
+</script>
+
+</body>
+</html>
