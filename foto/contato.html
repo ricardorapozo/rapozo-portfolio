@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<title>Rapozo — Direção de imagem e construção de presença</title>
+
+<meta name="description" content="Retratos, paisagem e narrativa visual com identidade autoral e alto contraste.">
+<meta name="author" content="Ricardo Rapozo">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+
+<link rel="canonical" href="https://ricardorapozo.com/foto/contato">
+
+<meta http-equiv="content-language" content="pt-BR">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rapozo — Construindo Presença">
+<meta property="og:description" content="Fotografia autoral e direção criativa. Imagens marcantes e memoráveis.">
+<meta property="og:url" content="https://ricardorapozo.com/foto/contato">
+<meta property="og:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Retrato autoral em alto contraste por Ricardo Rapozo">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rapozo">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rapozo — Fotografia como Presença">
+<meta name="twitter:description" content="Retratos, paisagem e imagem como identidade visual.">
+<meta name="twitter:image" content="https://ricardorapozo.com/foto/img/preview.jpg">
+<meta name="twitter:site" content="@rapozo">
+
+<style>
+
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* VOLTAR */
+.back-home {
+  position:fixed;
+  top:30px;
+  right:30px;
+  color:#fff;
+  text-decoration:none;
+  font-size:11px;
+  letter-spacing:2px;
+  opacity:0.5;
+  z-index:10;
+}
+
+/* GRID */
+.contact-container {
+  display:flex;
+  height:100vh;
+}
+
+/* ESQUERDA */
+.contact-left {
+  width:50%;
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-left img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.6s ease;
+}
+
+.contact-left:hover img {
+  transform:scale(1.03);
+}
+
+.contact-left::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.25);
+}
+
+/* DIREITA */
+.contact-right {
+  width:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px;
+  background:#000;
+}
+
+.contact-card {
+  max-width:420px;
+  width:100%;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:60px 50px;
+  text-align:center;
+}
+
+/* LOGO */
+.logo {
+  width:120px;
+  margin:0 auto 30px auto;
+  opacity:0.9;
+}
+
+/* TÍTULO */
+.title {
+  font-size:16px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+/* INFO */
+.info {
+  font-size:11px;
+  opacity:0.5;
+  margin-bottom:50px;
+  line-height:1.6;
+}
+
+/* INPUTS */
+input, textarea {
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  margin-bottom:30px;
+  color:#fff;
+  padding:10px 0;
+  font-size:13px;
+}
+
+/* BOTÃO */
+button {
+  width:100%;
+  padding:14px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+  letter-spacing:1px;
+}
+
+button:hover {
+  background:#fff;
+  color:#000;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px) {
+  .contact-container { flex-direction:column; }
+
+  .contact-left {
+    width:100%;
+    height:40vh;
+  }
+
+  .contact-right {
+    width:100%;
+    padding:40px 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="/" class="back-home">← Voltar</a>
+
+<div class="contact-container">
+
+  <!-- FOTO -->
+  <div class="contact-left">
+    <img src="img/contact/contact-bg.jpg" alt="Rapozo fotografia">
+  </div>
+
+  <!-- FORM -->
+  <div class="contact-right">
+    <div class="contact-card">
+
+      <img src="img/logo-white.webp" alt="Rapozo" class="logo">
+
+      <div class="title">ENTRE EM CONTATO</div>
+
+      <div class="info">
+        São Paulo — Brasil<br>
+        +55 (11) 99478-0379
+      </div>
+
+      <form action="https://formspree.io/f/mqedneqn" method="POST">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem"></textarea>
+        <button>Enviar</button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
