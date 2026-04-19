@@ -191,16 +191,25 @@
         <div id="containerOT">
             <!-- hero bg start -->
 
-            <div class="hero-fullscreen overlay cover-all-video">
+            <div class="hero-fullscreen overlay cover-all-video" id="hero-trigger">
+
                 <!-- Vimeo video start -->
                 <div class="hero-bg" id="vimeo-video">
                     <iframe data-fullscreeneo="" src="https://player.vimeo.com/video/1071968192?autoplay=1&amp;background=1&amp;hd=1&amp;loop=1"></iframe>
                 </div><!-- Vimeo video end -->
 
+                <!--Play no meio da página-->
+                <div class="play-button">
+                    <div class="play-icon"></div>
+                </div>
+
+                
                 <!-- <div class="hero-grain"></div> -->
 
             </div>
             <!-- hero bg end -->
+
+             <a id="portfolio-link" class="popup-vimeo" href="https://vimeo.com/1071968192" style="display:none;"></a>
 
             <!-- contact modal start -->
             <div class="contact-modal">
@@ -1090,5 +1099,20 @@
         </script> 
         <script src="js/the-fox.js" type="text/javascript">
         </script><!-- scripts end -->
+        
+        <script>
+        document.getElementById("hero-trigger").addEventListener("click", function() {
+            document.getElementById("portfolio-link").click();
+        });
+        </script>
+
+        <script>
+        document.querySelector(".play-button").addEventListener("click", function(e){
+            e.stopPropagation(); // evita conflito com hero
+            document.getElementById("portfolio-link").click();
+        });
+        </script>
+
+
     </body>
 </html>
