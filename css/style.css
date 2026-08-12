@@ -258,6 +258,10 @@ background-image: url(../img/works/works-5.jpg);
 background-image: url(../img/works/works-6.jpg);
 }
 
+.post-box-photo-works-7 {
+background-image: url(../img/works/works-7.jpg);
+}
+
 
 /* 1.9. panel left credits bg IMG BACKGROUND */
 .panel-left-credits.panel-left-bg-credits {
