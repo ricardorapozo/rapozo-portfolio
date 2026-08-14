@@ -2768,7 +2768,7 @@ bottom: 90px;
   }
 
   #services-lifting {
-    height: 270px;
+    height: 230px;
   }
 }
 
@@ -2895,7 +2895,7 @@ overflow-y: hidden;
   }
 
   #services-lifting .all-lifting-inner {
-    height: 220px;
+    height: 180px;
   }
 }
 
@@ -3118,7 +3118,7 @@ align-items: center;
 
 @media only screen and (min-width: 881px) {
   #services-carousel .post-block-second {
-    height: 220px;
+    height: 180px;
   }
 }
 
