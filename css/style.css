@@ -2766,6 +2766,10 @@ bottom: 90px;
     height: 324px;
     bottom: 66px;
   }
+
+  #services-lifting {
+    height: 270px;
+  }
 }
 
 @media only screen and (max-width: 880px) {
@@ -2888,6 +2892,10 @@ overflow-y: hidden;
 @media only screen and (min-width: 881px) {
   .all-lifting-inner {
     height: 274px;
+  }
+
+  #services-lifting .all-lifting-inner {
+    height: 220px;
   }
 }
 
@@ -3106,6 +3114,12 @@ height: 255px;
 #services-carousel .post-block-second {
 display: flex;
 align-items: center;
+}
+
+@media only screen and (min-width: 881px) {
+  #services-carousel .post-block-second {
+    height: 220px;
+  }
 }
 
 @media only screen and (max-width: 880px) {
