@@ -839,6 +839,12 @@ background: #fff;
 z-index: 10;
 }
 
+@media only screen and (min-width: 881px) {
+  .border-bottom {
+    height: 26px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .border-bottom {
     bottom: 0;
@@ -860,7 +866,14 @@ height: 65px;
 right: 0;
 bottom: 25px;
 background: #000;
-z-index: 10;
+z-index: 11;
+}
+
+@media only screen and (min-width: 881px) {
+  .border-bottom-menu {
+    height: 40px;
+    bottom: 26px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -2741,6 +2754,20 @@ bottom: 90px;
         box-shadow: 0 0 75px rgba(0, 0, 0, .85);
 }
 
+@media only screen and (min-width: 881px) {
+  #news-lifting,
+  #about-lifting,
+  #services-lifting,
+  #works-lifting,
+  #news-video-lifting-video,
+  #about-video-lifting-video,
+  #services-video-lifting-video,
+  #works-video-lifting-video {
+    height: 324px;
+    bottom: 66px;
+  }
+}
+
 @media only screen and (max-width: 880px) {
   #news-lifting,
   #about-lifting,
@@ -2856,6 +2883,12 @@ margin: 25px auto;
 background: #fff;
 overflow-x: hidden;
 overflow-y: hidden;
+}
+
+@media only screen and (min-width: 881px) {
+  .all-lifting-inner {
+    height: 274px;
+  }
 }
 
 @media only screen and (max-width: 880px) {
