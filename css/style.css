@@ -2767,8 +2767,8 @@ bottom: 90px;
     bottom: 66px;
   }
 
-  #services-lifting {
-    height: auto !important;
+  #services-lifting#services-lifting {
+    height: 264px;
   }
 }
 
@@ -2894,10 +2894,10 @@ overflow-y: hidden;
     height: 274px;
   }
 
-  #services-lifting .all-lifting-inner {
-    height: auto !important;
-    margin: 16px auto !important;
-    overflow: visible !important;
+  #services-lifting#services-lifting .all-lifting-inner {
+    height: 232px;
+    margin: 16px auto;
+    overflow: visible;
   }
 }
 
@@ -3121,15 +3121,15 @@ overflow: visible;
 
 @media only screen and (min-width: 881px) {
   #services-carousel .post-block-second {
-    height: auto !important;
+    height: 232px;
   }
 
   #services-carousel .post-inner {
-    margin-bottom: 16px !important;
+    margin-bottom: 16px;
   }
 
   #services h1.post-title {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
 }
 
