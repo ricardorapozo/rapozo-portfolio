@@ -2768,8 +2768,7 @@ bottom: 90px;
   }
 
   #services-lifting {
-    height: auto;
-    min-height: 230px;
+    height: 230px !important;
   }
 }
 
@@ -2896,9 +2895,9 @@ overflow-y: hidden;
   }
 
   #services-lifting .all-lifting-inner {
-    height: auto;
-    min-height: 180px;
-    overflow: visible;
+    height: 222px !important;
+    margin: 4px auto !important;
+    overflow: visible !important;
   }
 }
 
@@ -3122,8 +3121,11 @@ overflow: visible;
 
 @media only screen and (min-width: 881px) {
   #services-carousel .post-block-second {
-    height: auto;
-    min-height: 180px;
+    height: 222px !important;
+  }
+
+  #services-carousel .post-inner {
+    margin-bottom: 4px !important;
   }
 }
 
